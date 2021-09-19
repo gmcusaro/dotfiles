@@ -1,0 +1,5 @@
+[user]
+	name = Giovanni Maria Cusaro
+	email = gcusaro@me.com
+[alias]
+  gst = git status
