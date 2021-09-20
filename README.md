@@ -11,7 +11,7 @@ My dotfile configuration.
 - NeoVim (lua) config
 - Miscellaneous setup
 
-# Setup enviroment on your machine
+## Setup enviroment on your machine
 
 `git clone --bare git@github.com:gmcusaro/dotfiles.git $HOME/.dotfiles`
 `alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'`
