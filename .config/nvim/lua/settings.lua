@@ -23,12 +23,14 @@ cmd[[highlight ColorColumn ctermbg=magenta]]
 
 g.nobackup = true
 g.nowritebackup = true
+g.noswapfile = true
+g.noshowmode = false
 
 o.swapfile = false
 o.completeopt = 'menuone,noselect,noinsert'
 o.mouse = "nv"
 o.cmdheight = 2
-o.scrolloff = 5
+o.scrolloff = 7
 o.clipboard = "unnamedplus"
 o.tabstop = 2
 o.shiftwidth = 2

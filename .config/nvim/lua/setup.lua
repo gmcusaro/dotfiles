@@ -20,10 +20,11 @@ require'telescope'.setup {
     prompt_prefix = " >",
     color_devicons = true,
 
-    preview = true,
+    previewer = true,
     file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
     grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
     qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
+
     mappings = {
       i = {
         ["<C-j>"] = actions.move_selection_better,

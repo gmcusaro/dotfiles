@@ -13,9 +13,15 @@ My dotfile configuration.
 
 ## Setup enviroment on your machine
 
-`git clone --bare git@github.com:gmcusaro/dotfiles.git $HOME/.dotfiles`
-`alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'`
-`dotfile checkout`
+```sh
+git clone --bare git@github.com:gmcusaro/dotfiles.git $HOME/.dotfiles
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+dotfiles config --local status.showUntrackedFiles no
+
+dotfiles checkout
+```
 
 ## Licence
 
