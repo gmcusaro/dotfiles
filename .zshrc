@@ -16,7 +16,7 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 ZSH_DISABLE_COMPFIX="true"
 
 # my personal list
-plugins=(git osx ruby yarn zsh_reload zsh-autosuggestions zsh-syntax-highlighting emoji brew web-search autojump)
+plugins=(git osx ruby yarn zsh_reload zsh-autosuggestions zsh-syntax-highlighting emoji brew web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -56,4 +56,4 @@ alias lst="exa -a -T --git-ignore --icons"
 alias app="brew cu"
 alias s="spotify"
 
-alias dotfiles='/usr/bin/git --git-dir=/Users/beta/.dotfiles/ --work-tree=/Users/beta'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
