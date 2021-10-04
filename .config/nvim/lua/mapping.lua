@@ -41,3 +41,7 @@ nnoremap('<leader>w', ':TZAtaraxis<CR>')
 -- Telescope
 nnoremap('ff', ':Telescope find_files<CR>')
 nnoremap('fb', ':Telescope buffers<CR>')
+
+-- Bdelete
+nnoremap('Q', ':Bdelete menu<CR>')
+nnoremap('T', ':Bdelete this')
