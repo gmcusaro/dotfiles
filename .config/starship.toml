@@ -17,3 +17,6 @@ format = ""
 
 [lua]
 format = ""
+
+[nodejs]
+format = ""
