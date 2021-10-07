@@ -16,6 +16,7 @@ cmd[[au BufEnter * set fo-=c fo-=r fo-=o]]
 -- Remove whitespace on save
 cmd[[au BufWritePre * :%s/\s\+$//e]]
 
+-- Auto save files when focus is lost
 cmd[[au FocusLost, WinLeave * :silent! noautocmd w]]
 
 -- Set color column magenta

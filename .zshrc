@@ -16,7 +16,7 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 ZSH_DISABLE_COMPFIX="true"
 
 # my personal list
-plugins=(git osx ruby yarn zsh_reload zsh-autosuggestions zsh-syntax-highlighting emoji brew web-search)
+plugins=(git osx ruby yarn zsh-autosuggestions zsh-syntax-highlighting emoji brew web-search)
 
 source $ZSH/oh-my-zsh.sh
 
