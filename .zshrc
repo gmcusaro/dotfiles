@@ -49,10 +49,10 @@ eval "$(starship init zsh)"
 # Aliases
 alias t="touch"
 alias m="mkdir"
+alias c="clear"
 alias vim=nvim
 alias ls="exa -a --icons"
 alias lsl="exa -a -T --git-ignore --icons"
 alias app="brew cu"
-alias s="spotify"
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
