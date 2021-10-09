@@ -11,7 +11,7 @@ export UPDATE_ZSH_DAYS=7
 export TERM=xterm-256color
 
 # ssh
-export SSH_KEY_PATH="~/.ssh/giohub
+export SSH_KEY_PATH="~/.ssh/giohub"
 
 ZSH_DISABLE_COMPFIX="true"
 
@@ -23,7 +23,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 export PATH="$HOME/.rbenv/bin:$PATH"
 
-export EDITOR="nvim"
+export EDITOR=nvim
 export VISUAL="$EDITOR"
 
 KEYTIMEOUT=0
