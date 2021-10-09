@@ -11,7 +11,7 @@ export UPDATE_ZSH_DAYS=7
 export TERM=xterm-256color
 
 # ssh
-export SSH_KEY_PATH="~/.ssh/dsa_id"
+export SSH_KEY_PATH="~/.ssh/giohub
 
 ZSH_DISABLE_COMPFIX="true"
 
@@ -21,10 +21,10 @@ plugins=(git osx ruby yarn zsh-autosuggestions zsh-syntax-highlighting emoji bre
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-#export PATH="bin:.:~/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 
-export EDITOR="$HOME/bin/mate -w"
+export EDITOR="nvim"
+export VISUAL="$EDITOR"
 
 KEYTIMEOUT=0
 
