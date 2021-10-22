@@ -5,7 +5,7 @@ local cmd  = vim.cmd              -- esecute Vim commands
 local exex = vim.api.nvim_exec    -- execute Vimscript
 local fn   = vim.fn               -- call Vim function
 local g    = vim.g                -- global variables
-local o  = vim.opt                -- global/buffer/windows-scoped options
+local o    = vim.opt              -- global/buffer/windows-scoped options
 
 g.modeline=0
 g.scriptencoding='utf-8'
