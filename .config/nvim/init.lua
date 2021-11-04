@@ -6,7 +6,7 @@ Source: https://github.com/gmcusaro/dotfiles
 
 --]]
 
-require('setup')
 require('plugin')
 require('mapping')
 require('settings')
+require('setup')
