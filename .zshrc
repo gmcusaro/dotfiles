@@ -52,3 +52,4 @@ alias app="brew cu"
 
 # Dotfiles bare repo
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias brain='Library/Mobile\ Documents/iCloud\~md\~obsidian/Documents/brain/'
