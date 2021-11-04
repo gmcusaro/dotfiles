@@ -50,6 +50,11 @@ alias ls="exa -a --icons"
 alias lsl="exa -a -T --git-ignore --icons"
 alias app="brew cu"
 
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
 # Dotfiles bare repo
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias brain='Library/Mobile\ Documents/iCloud\~md\~obsidian/Documents/brain/'
