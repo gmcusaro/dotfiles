@@ -8,5 +8,4 @@ Source: https://github.com/gmcusaro/dotfiles
 
 require('settings')
 require('mapping')
-require('setup')
 require('plugin')

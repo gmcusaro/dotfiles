@@ -1,16 +1,3 @@
--- Setup
-
--- Lualine
-require'lualine'.setup{
-  options = {
-    theme = 'iceberg_dark',
-    section_separators = {'', ''}
-  },
-  sections = {
-    lualine_x = {'encoding', 'filetype'}
-  }
-}
-
 -- Telescope
 local actions = require'telescope.actions'
 
@@ -34,10 +21,3 @@ require'telescope'.setup {
     }
   }
 }
-
--- Kommentary
-require('kommentary.config').configure_language("default", {
-  prefer_single_line_comments = true,
-  use_consistent_indentation = true,
-  ignore_whitespace = true
-})
