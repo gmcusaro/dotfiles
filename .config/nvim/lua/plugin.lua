@@ -31,10 +31,6 @@ require('packer').startup(function(use)
   }
 
   use {
-    'voldikss/vim-floaterm'
-  }
-
-  use {
     'Asheq/close-buffers.vim'
   }
 

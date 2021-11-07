@@ -125,11 +125,6 @@ _G.packer_plugins = {
     path = "/Users/giovanni/.local/share/nvim/site/pack/packer/start/vim-eunuch",
     url = "https://github.com/tpope/vim-eunuch"
   },
-  ["vim-floaterm"] = {
-    loaded = true,
-    path = "/Users/giovanni/.local/share/nvim/site/pack/packer/start/vim-floaterm",
-    url = "https://github.com/voldikss/vim-floaterm"
-  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/giovanni/.local/share/nvim/site/pack/packer/start/vim-fugitive",
