@@ -4,5 +4,6 @@
 [alias]
   gst = git status
   ga  = git add
+  gp  = git push
 [core]
 	editor = vim
