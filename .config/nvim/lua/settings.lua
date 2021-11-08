@@ -28,7 +28,7 @@ g.noswapfile = true
 g.noshowmode = false
 
 o.swapfile = false
-o.completeopt = 'menuone,noselect,noinsert'
+o.completeopt = 'menu,menuone,noselect,noinsert'
 o.mouse = "nv"
 o.cmdheight = 2
 o.scrolloff = 7
