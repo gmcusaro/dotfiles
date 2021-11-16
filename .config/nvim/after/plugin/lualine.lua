@@ -1,7 +1,7 @@
 -- Lualine
 require'lualine'.setup{
   options = {
-    theme = 'iceberg',
+    theme = 'nightfox',
     section_separators = {'', ''}
   },
   sections = {

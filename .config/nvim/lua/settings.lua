@@ -49,4 +49,4 @@ o.pumblend = 18
 
 -- Theme
 o.termguicolors = true
-cmd 'colorscheme iceberg'
+cmd 'colorscheme nightfox'

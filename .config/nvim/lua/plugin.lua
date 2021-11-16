@@ -9,6 +9,7 @@ require('packer').startup(function(use)
   use 'tpope/vim-surround'
 
   use 'cocopon/iceberg.vim'
+  use 'EdenEast/nightfox.nvim'
 
   use {
       'kyazdani42/nvim-tree.lua',
