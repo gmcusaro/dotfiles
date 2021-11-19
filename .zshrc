@@ -11,7 +11,8 @@ export EDITOR=nvim
 export VISUAL="$EDITOR"
 
 # User configuration
-export PATH="$HOME/.rbenv/bin:$PATH"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/giohub"
