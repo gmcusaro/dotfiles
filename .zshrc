@@ -49,7 +49,7 @@ alias c="clear"
 alias vim=nvim
 alias ls="exa -a --icons"
 alias lsl="exa -a -T --git-ignore --icons"
-alias app="brew cu"
+alias app="brew cu -a"
 
 alias ..="cd .."
 alias ...="cd ../.."
