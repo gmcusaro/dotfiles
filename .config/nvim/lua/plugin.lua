@@ -15,9 +15,6 @@ require('packer').startup(function(use)
       requires = 'kyazdani42/nvim-web-devicons'
   }
 
-  use 'Pocco81/TrueZen.nvim'
-
-  -- use 'b3nj5m1n/kommentary'
   use {
     'numToStr/Comment.nvim',
     config = function()

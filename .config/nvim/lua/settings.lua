@@ -27,7 +27,7 @@ g.nobackup = true
 g.nowritebackup = true
 g.noswapfile = true
 
---Do not show the mode in the command line
+-- Do not show the mode in the command line
 g.noshowmode = false
 
 o.completeopt = 'menu,menuone,noselect,noinsert'
@@ -66,7 +66,7 @@ o.pumblend = 18
 
 -- Show whitespace characters
 o.list = true
-o.listchars = { space = "·", tab = "» ", eol = "¬" }
+o.listchars = {eol = "¬", trail = "·"}
 
 -- Use the system clipboard
 o.clipboard = "unnamedplus"
