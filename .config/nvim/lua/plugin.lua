@@ -17,7 +17,13 @@ require('packer').startup(function(use)
 
   use 'Pocco81/TrueZen.nvim'
 
-  use 'b3nj5m1n/kommentary'
+  -- use 'b3nj5m1n/kommentary'
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
 
   use {
     'hoob3rt/lualine.nvim',
