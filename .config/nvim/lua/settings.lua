@@ -29,8 +29,8 @@ g.noswapfile = true
 
 -- Do not show the mode in the command line
 g.noshowmode = false
-
 o.completeopt = 'menu,menuone,noselect,noinsert'
+o.pumblend = 18
 
 -- Eliminate delays
 o.timeout = false
@@ -62,11 +62,10 @@ o.ignorecase = true
 
 o.number = true
 
-o.pumblend = 18
+o.breakindent = true
 
 -- Show whitespace characters
 o.list = true
-o.listchars = {eol = "¬", trail = "·"}
 
 -- Use the system clipboard
 o.clipboard = "unnamedplus"

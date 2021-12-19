@@ -5,6 +5,6 @@ require'lualine'.setup{
     section_separators = {'', ''}
   },
   sections = {
-    lualine_x = {'encoding', 'filetype'}
+    lualine_x = {'encoding', 'filetype'},
   }
 }

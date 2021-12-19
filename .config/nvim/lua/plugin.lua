@@ -1,5 +1,4 @@
 -- Plugins
-
 require('packer').startup(function(use)
 -- Packer can manage itself
   use 'wbthomason/packer.nvim'
@@ -36,4 +35,7 @@ require('packer').startup(function(use)
     'Asheq/close-buffers.vim'
   }
 
+  use {
+    'folke/zen-mode.nvim'
+  }
 end)

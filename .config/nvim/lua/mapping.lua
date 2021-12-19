@@ -45,3 +45,6 @@ nnoremap('fb', ':Telescope buffers<CR>')
 -- Bdelete
 nnoremap('Q', ':Bdelete menu<CR>')
 nnoremap('T', ':Bdelete this')
+
+-- Backspace delete visual mode
+vnoremap('<BS>', 'X')
