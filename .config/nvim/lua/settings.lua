@@ -44,7 +44,7 @@ o.cmdheight = 2
 o.scrolloff = 7
 o.clipboard = "unnamedplus"
 
--- Use tabs
+-- Set tab behavior
 o.tabstop = 2
 o.shiftwidth = 2
 o.softtabstop = 2
