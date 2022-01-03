@@ -48,3 +48,7 @@ nnoremap('T', ':Bdelete this')
 
 -- Backspace delete visual mode
 vnoremap('<BS>', 'X')
+
+-- GitSigns
+nnoremap('<leader>s', ':Gitsigns toggle_current_line_blame<CR>')
+

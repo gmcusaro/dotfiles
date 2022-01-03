@@ -38,4 +38,11 @@ require('packer').startup(function(use)
   use {
     'folke/zen-mode.nvim'
   }
+
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+  }
 end)
