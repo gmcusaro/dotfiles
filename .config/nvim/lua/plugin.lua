@@ -47,13 +47,11 @@ require('packer').startup(function(use)
     event = 'InsertEnter'
   }
 
-  -- Markdown
   use {
     'plasticboy/vim-markdown',
     ft = { "markdown" }
   }
 
-  -- Start screen
   use {
     'goolord/alpha-nvim',
     requires = { 'kyazdani42/nvim-web-devicons' },
