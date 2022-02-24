@@ -19,7 +19,7 @@ require('packer').startup(function(use)
     config = function()
         require('Comment').setup()
     end
-}
+  }
 
   use {
     'hoob3rt/lualine.nvim',
@@ -36,13 +36,29 @@ require('packer').startup(function(use)
   }
 
   use {
-    'folke/zen-mode.nvim'
-  }
-
-  use {
     'lewis6991/gitsigns.nvim',
     requires = {
       'nvim-lua/plenary.nvim'
     },
+  }
+
+  use {
+    'jdhao/better-escape.vim',
+    event = 'InsertEnter'
+  }
+
+  -- Markdown
+  use {
+    'plasticboy/vim-markdown',
+    ft = { "markdown" }
+  }
+
+  -- Start screen
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+    config = function ()
+      require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
   }
 end)

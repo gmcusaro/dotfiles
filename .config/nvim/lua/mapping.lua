@@ -12,10 +12,6 @@ local vnoremap = function(lhs, rhs)
 	vim.api.nvim_set_keymap('v', lhs, rhs, {noremap = true})
 end
 
-
--- Esc from insert mode
-inoremap('jk', '<Esc>')
-
 -- Split navigation
 nnoremap('<C-h>', '<C-w>h')
 nnoremap('<C-j>', '<C-w>j')
@@ -35,9 +31,6 @@ nnoremap('<C-n>', ':NvimTreeToggle<CR>')
 nnoremap('<leader>r', ':NvimTreeRefresh')
 nnoremap('<leader>f', ':NvimTreeFind')
 
--- TrueZen
-nnoremap('<leader>w', ':TZAtaraxis<CR>')
-
 -- Telescope
 nnoremap('ff', ':Telescope find_files<CR>')
 nnoremap('fb', ':Telescope buffers<CR>')
@@ -51,4 +44,3 @@ vnoremap('<BS>', 'X')
 
 -- GitSigns
 nnoremap('<leader>s', ':Gitsigns toggle_current_line_blame<CR>')
-
