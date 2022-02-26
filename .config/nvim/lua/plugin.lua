@@ -41,12 +41,7 @@ require('packer').startup(function(use)
     },
   }
 
-  use {
-    'jdhao/better-escape.vim',
-    event = 'InsertEnter'
-  }
-
-  use 'plasticboy/vim-markdown'
+  use 'jdhao/better-escape.vim'
 
   use {
     'goolord/alpha-nvim',
@@ -55,4 +50,6 @@ require('packer').startup(function(use)
       require'alpha'.setup(require'alpha.themes.startify'.config)
     end
   }
+
+  use 'folke/zen-mode.nvim'
 end)
