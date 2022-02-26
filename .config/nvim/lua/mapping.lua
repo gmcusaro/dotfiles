@@ -40,7 +40,10 @@ nnoremap('Q', ':Bdelete menu<CR>')
 nnoremap('T', ':Bdelete this')
 
 -- Backspace delete visual mode
-vnoremap('<BS>', 'X')
+vnoremap('<BS>', '"_d')
 
 -- GitSigns
 nnoremap('<leader>s', ':Gitsigns toggle_current_line_blame<CR>')
+
+-- TrueZen
+nnoremap('<leader>z', ':ZenMode<CR>')
