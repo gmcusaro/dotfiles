@@ -18,7 +18,7 @@ nnoremap('<C-j>', '<C-w>j')
 nnoremap('<C-k>', '<C-w>k')
 nnoremap('<C-l>', '<C-w>l')
 
-nnoremap('<TAB>', ':bnext<CR>')
+nnoremap('<TAB>',   ':bnext<CR>')
 nnoremap('<S-TAB>', 'bprevious<CR>')
 
 nnoremap('<leader>v', ':vsplit<CR>')
@@ -27,12 +27,13 @@ nnoremap('<leader>+', ':vertical resize +5<CR>')
 nnoremap('<leader>-', ':vertical resize -5<CR>')
 
 -- Nvim Tree
-nnoremap('<C-n>', ':NvimTreeToggle<CR>')
+nnoremap('<C-n>',     ':NvimTreeToggle<CR>')
 nnoremap('<leader>r', ':NvimTreeRefresh')
 nnoremap('<leader>f', ':NvimTreeFind')
 
 -- Telescope
 nnoremap('ff', ':Telescope find_files<CR>')
+nnoremap('fh', ':Telescope oldfiles<CR>')
 nnoremap('fb', ':Telescope buffers<CR>')
 
 -- Bdelete
