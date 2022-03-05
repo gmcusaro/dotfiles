@@ -42,7 +42,6 @@ o.ttimeoutlen = 0
 o.mouse = "nv"
 o.cmdheight = 2
 o.scrolloff = 7
-o.clipboard = "unnamedplus"
 
 -- Set tab behavior
 o.tabstop = 2
@@ -61,7 +60,6 @@ o.showmatch = true
 o.ignorecase = true
 
 o.number = true
-
 o.breakindent = true
 
 -- Show whitespace characters
