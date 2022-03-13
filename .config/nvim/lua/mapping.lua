@@ -37,8 +37,8 @@ nnoremap('fh', ':Telescope oldfiles<CR>')
 nnoremap('fb', ':Telescope buffers<CR>')
 
 -- Bdelete
-nnoremap('Q', ':Bdelete menu<CR>')
-nnoremap('T', ':Bdelete this')
+nnoremap('<leader>b', ':Bdelete menu<CR>')
+nnoremap('<leader>t', ':Bdelete this')
 
 -- Backspace delete visual mode
 vnoremap('<BS>', '"_d')
