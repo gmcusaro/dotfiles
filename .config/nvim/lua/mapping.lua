@@ -18,9 +18,6 @@ nnoremap('<C-j>', '<C-w>j')
 nnoremap('<C-k>', '<C-w>k')
 nnoremap('<C-l>', '<C-w>l')
 
-nnoremap('<TAB>',   ':bnext<CR>')
-nnoremap('<S-TAB>', 'bprevious<CR>')
-
 nnoremap('<leader>v', ':vsplit<CR>')
 nnoremap('<leader>h', ':split<CR>')
 nnoremap('<leader>+', ':vertical resize +5<CR>')
@@ -36,9 +33,13 @@ nnoremap('ff', ':Telescope find_files<CR>')
 nnoremap('fh', ':Telescope oldfiles<CR>')
 nnoremap('fb', ':Telescope buffers<CR>')
 
--- Bdelete
-nnoremap('<leader>b', ':Bdelete menu<CR>')
-nnoremap('<leader>t', ':Bdelete this')
+-- Move between buffers
+nnoremap('<TAB>',   ':bnext<CR>')
+nnoremap('<S-TAB>', 'bprevious<CR>')
+
+-- Buffer delete (see plugins)
+nnoremap('<leader>b', ':Bdelete menu')
+nnoremap('<leader>t', ':Bdelete this<CR>')
 
 -- Backspace delete visual mode
 vnoremap('<BS>', '"_d')
