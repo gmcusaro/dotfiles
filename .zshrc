@@ -46,13 +46,14 @@ eval "$(starship init zsh)"
 alias t = 'touch'
 alias m = 'mkdir'
 alias c = 'clear'
-alias vim = nvim
 alias ls = 'exa -a --icons'
 alias lsl = 'exa -a -T --git-ignore --icons'
 alias app = 'brew cu -a'
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
+alias .. = 'cd ..'
+alias ... = 'cd ../..'
+alias .... = 'cd ../../..'
+
+alias vim = nvim
 
 # Dotfiles bare repo
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
