@@ -20,10 +20,9 @@ g.nobackup = true
 g.nowritebackup = true
 g.noswapfile = true
 
-g.noshowmode = false
 o.completeopt = 'menu,menuone,noselect,noinsert'
 o.pumblend = 18
-o.wildmode = 'longest:full'
+o.wildmode = 'longest,full'
 
 -- Eliminate delays
 o.timeout = false
@@ -32,7 +31,7 @@ o.ttimeout = false
 o.ttimeoutlen = 0
 
 o.mouse = "nv" -- Enable mouse support
-o.scrolloff = 10 -- Make it so there are always ten lines below my cursor
+o.scrolloff = 5 -- Make it so there are always ten lines below my cursor
 
 -- Set tab behavior
 o.tabstop = 2
@@ -54,6 +53,8 @@ o.number = true
 o.breakindent = true
 
 o.list = true -- Show whitespace characters
+g.noshowmode = false
+
 o.clipboard = "unnamedplus" -- Use the system clipboard
 o.shortmess:append("I") -- Do not show the startup message
 
