@@ -34,11 +34,13 @@ nnoremap('fh', ':Telescope oldfiles<CR>')
 nnoremap('fb', ':Telescope buffers<CR>')
 
 -- Move between buffers
+--nnoremap('<leader>m',   ':bnext<CR>')
+--nnoremap('<leader>n', 'bprevious<CR>')
 nnoremap('<TAB>',   ':bnext<CR>')
 nnoremap('<S-TAB>', 'bprevious<CR>')
 
 -- Buffer delete (see plugins)
-nnoremap('<leader>b', ':Bdelete menu')
+nnoremap('<leader>b', ':Bdelete menu<CR><CR>')
 nnoremap('<leader>t', ':Bdelete this<CR>')
 
 -- Backspace delete visual mode
