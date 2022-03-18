@@ -2,8 +2,10 @@
   name = Giovanni Maria Cusaro
   email = gcusaro@me.com
 [alias]
-  gst = git status
   ga = git add
+  gst= git status
   gp = git push
 [core]
-	editor = vim
+  editor = vim
+[init]
+  defaultBranch = main
