@@ -32,6 +32,7 @@ o.ttimeoutlen = 0
 
 o.mouse = "nv" -- Enable mouse support
 o.scrolloff = 5 -- Make it so there are always ten lines below my cursor
+g.statusline = 3
 
 -- Set tab behavior
 o.tabstop = 2
