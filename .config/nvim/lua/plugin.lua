@@ -8,7 +8,7 @@ require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   use 'tpope/vim-eunuch'
 
-  use 'EdenEast/nightfox.nvim'
+  use 'rmehri01/onenord.nvim'
 
   use {
       'kyazdani42/nvim-tree.lua',
