@@ -4,7 +4,7 @@ if not ok then
   return
 end
 
-comment.setup({
+comment.setup {
   padding = false,
   ignore = "^$"
-})
+}
