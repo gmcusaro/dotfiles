@@ -1,5 +1,10 @@
 -- Nvim-tree
-require'nvim-tree'.setup {
+local ok, nvimtree = pcall(require, "nvim-tree")
+if not ok then
+  return
+end
+
+nvimtree.setup {
   options = {
     nvim_tree_gitignore = 1,
     nvim_tree_refresh_wait = 500,
