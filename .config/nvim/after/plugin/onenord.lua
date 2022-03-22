@@ -5,6 +5,7 @@ if not ok then
 end
 
 onenord.setup {
+  borders = false,
   styles = {
     comments = 'italic',
   },
@@ -13,5 +14,6 @@ onenord.setup {
   },
   custom_colors = {
     bg = '#060519',
+    gray = '#060519',
   }
 }
