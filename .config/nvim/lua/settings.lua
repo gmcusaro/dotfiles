@@ -58,6 +58,3 @@ g.noshowmode = false
 
 o.clipboard = "unnamedplus" -- Use the system clipboard
 o.shortmess:append("I") -- Do not show the startup message
-
---o.termguicolors = true
-cmd 'colorscheme onenord' -- Theme

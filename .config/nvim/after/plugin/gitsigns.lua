@@ -11,8 +11,6 @@ signs.setup {
     virt_text_pos = 'eol',
     delay = 500
   },
-  signcolumn = false,
-  numhl = true,
-  linehl = true,
+  signcolumn = true,
   word_diff = true,
 }

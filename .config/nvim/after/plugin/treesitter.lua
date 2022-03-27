@@ -10,5 +10,5 @@ treesitter.setup({
   highlight = {
     enable = true,
     disable = {},
-  },
+  }
 })

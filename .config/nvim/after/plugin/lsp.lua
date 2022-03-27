@@ -1,6 +1,6 @@
 -- LSP
 local nvim_lsp = require('lspconfig')
-local servers = { 'tsserver', 'html' }
+--local servers = { 'tsserver', 'html' }
 
 local on_attach = function(slinet, bufnr)
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -32,9 +32,24 @@ local on_attach = function(slinet, bufnr)
     --client.resolved_capabilities.document_range_formatting = false
 end
 
-for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
-        capabilities = capabilities,
-        on_attach = on_attach,
-  }
-end
+--for _, lsp in ipairs(servers) do
+--  nvim_lsp[lsp].setup {
+--        capabilities = capabilities,
+--        on_attach = on_attach,
+--  }
+--end
+
+require'lspconfig'.tsserver.setup{
+  on_attach = on_attach,
+}
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+require'lspconfig'.cssls.setup {
+  capabilities = capabilities,
+}
+
+require'lspconfig'.html.setup {
+  capabilities = capabilities,
+}

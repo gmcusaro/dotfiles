@@ -1,10 +1,4 @@
--- Lualine
-local ok, lualine = pcall(require, 'lualine')
-if not ok then
-  return
-end
-
-lualine.setup{
+require('lualine').setup{
   options = {
     theme = 'onenord',
     section_separators = { left = '', right = '' },
