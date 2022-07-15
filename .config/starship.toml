@@ -1,16 +1,16 @@
 add_newline = false
 
 [character]
-success_symbol="[▲](bold)"
+success_symbol = "[▲](bold)"
 error_symbol = "[▲](bold red)"
 
 [directory]
-truncation_length=100
-truncate_to_repo=false
-style="white italic"
+truncation_length = 100
+truncate_to_repo = false
+style = "white italic"
 
 [git_branch]
-style="cyan"
+style = "cyan"
 
 [swift]
 format = ""
