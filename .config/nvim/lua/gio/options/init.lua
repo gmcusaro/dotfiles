@@ -62,7 +62,8 @@ opt.confirm = true
 opt.textwidth = 80    -- maximum width of text in insert mode for comments
 
 opt.updatetime = 1500 -- ms of inactivity it takes to update swap
-g.statusline = 3    -- use one statusline for many buffers
+
+opt.laststatus = 3 -- use one statusline for many buffers
 
 opt.shortmess = opt.shortmess
 		+ 'I' -- remove intro screen
