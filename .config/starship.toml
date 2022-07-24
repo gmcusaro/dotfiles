@@ -1,16 +1,17 @@
-add_newline = false
+add_newline = true
 
 [character]
 success_symbol = "[▲](bold)"
-error_symbol = "[▲](bold red)"
+error_symbol = "[✗](red)"
 
 [directory]
-truncation_length = 100
+truncation_length = 80
 truncate_to_repo = false
 style = "white italic"
 
 [git_branch]
 style = "cyan"
+symbol = " "
 
 [swift]
 format = ""
@@ -20,3 +21,7 @@ format = ""
 
 [nodejs]
 format = ""
+
+[package]
+format = "[$symbol$version]($style) "
+symbol = " "
