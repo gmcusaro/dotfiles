@@ -17,10 +17,11 @@ opt.showmode = false
 
 -- Disable backup and swap files
 g.backup = false
-g.backup = false
+g.writebackup = false
 g.swapfile = false
 
 opt.scrolloff = 8
+opt.sidescrolloff = 5
 
 opt.errorbells = true
 
@@ -31,6 +32,7 @@ opt.cursorline = true
 
 opt.cmdheight = 2
 opt.whichwrap = 'b,s,<,>,[,],h,l'
+opt.conceallevel = 0
 
 opt.tabstop = 4
 opt.softtabstop = 4
@@ -46,17 +48,20 @@ opt.incsearch = true
 opt.ignorecase = true
 g.showmatch = true
 
+opt.conceallevel = 0
+
 opt.splitbelow = true
 opt.splitright = true
 opt.equalalways = false
 
 -- Eliminate delays
 opt.timeout = false
-opt.timeoutlen = 0
-
+opt.timeoutlen = 100
 opt.updatetime = 750 -- Stop longer updatetime
 
 opt.confirm = true
+
+-- wo.signcolumn = "yes // see gitsign" // see gitsign
 
 -- wo.colorcolumn = "80" -- da inserire come autocomand regex
 opt.textwidth = 80    -- maximum width of text in insert mode for comments
