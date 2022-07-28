@@ -27,7 +27,7 @@ nnoremap("<leader>-", ":vertical resize -5<CR>")
 
 -- Tab navigation
 nnoremap("<TAB>",   ":bnext<CR>")
-nnoremap("<S-TAB>", "bprevious<CR>")
+nnoremap("<S-TAB>", ":bprevious<CR>")
 
 -- Telescope
 nnoremap("ff", ":Telescope<CR>")
