@@ -28,15 +28,8 @@ autocmd({"BufReadPre"}, {
     command = "filetype plugin indent on",
 })
 
--- autocmd({"BufWritePost"}, {
---     pattern = "**/lua/packer",
---     command = "source <afile> | PackerCompile"
--- })
-
--- Configure Packer automatically
--- vim.cmd([[
---   augroup packer_user_config
---     autocmd!
---     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
---   augroup end
--- ]])
+-- packer compile
+autocmd({'BufWritePost'}, {
+    pattern = 'plugin.lua',
+    command = [[source <afile> | PackerCompile]],
+})
