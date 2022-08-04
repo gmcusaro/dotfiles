@@ -6,6 +6,6 @@
   gst= git status
   gp = git push
 [core]
-  editor = vim
+  editor = neovim
 [init]
   defaultBranch = main
