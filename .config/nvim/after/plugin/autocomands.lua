@@ -8,12 +8,6 @@ utils.define_augroups({
         {'FocusLost, WinLeave', '*', 'wall'},
         {'BufWritePre', '*', '%s/\\s\\+$//e'},
         {'BufReadPre', '*', 'filetype plugin indent on'},
-        {'BufWritePost', 'plugin.lua', 'source <afile> | PackerCompile'}
+        {'BufWritePost', 'plugin.lua', 'source <afile> | PackerCompile'},
     },
 })
-
--- autocmd({"BufReadPre"}, {
---     pattern = {'*'},
---     command = [[call matchadd('ColorColumn', '\%81v\s*\zs\S', 100)]]
--- })
-
