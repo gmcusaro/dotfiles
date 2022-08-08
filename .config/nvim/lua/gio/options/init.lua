@@ -64,7 +64,6 @@ opt.confirm = true
 -- wo.signcolumn = "yes // see gitsign" // see gitsign
 
 -- wo.colorcolumn = "80" -- da inserire come autocomand regex
-opt.textwidth = 80    -- maximum width of text in insert mode for comments
 
 opt.updatetime = 1500 -- ms of inactivity it takes to update swap
 

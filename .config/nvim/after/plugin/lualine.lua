@@ -9,8 +9,8 @@ require('lualine').setup  {
         lualine_a = { 'mode' },
         lualine_b = { 'branch', 'diff' },
         lualine_c = { 'buffers' },
-        lualine_x = { 'filetype' },
-        lualine_y = { 'encoding', 'location' },
+        lualine_x = { },
+        lualine_y = { 'filetype', 'encoding', 'location' },
         lualine_z = { }
     }
 }

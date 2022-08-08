@@ -1,5 +1,3 @@
---local utils = require("utils")
-
 local nv_utils = {}
 
 function nv_utils.define_augroups(definitions) -- {{{1
