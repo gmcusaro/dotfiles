@@ -1,11 +1,21 @@
 [user]
-  name = Giovanni Maria Cusaro
-  email = gcusaro@me.com
+    name = Giovanni Maria Cusaro
 [alias]
-  ga = git add
-  gst= git status
-  gp = git push
+    ga  = git add
+    gst = git status
+    gp  = git push
+    cm  = commit -m
 [core]
-  editor = neovim
+    editor = neovim
+    excludesfile = ~/.gitignore
 [init]
-  defaultBranch = main
+    defaultBranch = main
+[hub]
+    protocol = https
+[github]
+    user = gmcusaro
+[diff]
+    tool = nvimdiff
+[difftool "nvimdiff"]
+	cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
+	path =
