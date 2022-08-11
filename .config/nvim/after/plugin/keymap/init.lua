@@ -8,29 +8,35 @@ local nmap     = Remap.nmap
 nnoremap("<leader>e", ":Ex<CR>")
 -- nnoremap("<leader>e", ":Lexplore<CR>")
 
+-- Do not yank with x
+nnoremap('x', '"_x')
+
 -- Backspace delete visual mode
 vnoremap("<BS>", "\"_d")
 
--- Split navigation
-nnoremap("<C-h>", "<C-w>h")
-nnoremap("<C-j>", "<C-w>j")
-nnoremap("<C-k>", "<C-w>k")
-nnoremap("<C-l>", "<C-w>l")
+-- Select all
+nnoremap('<leader>a', 'gg<S-v>G')
 
-nnoremap("<leader>v", ":vsplit<CR>")
-nnoremap("<leader>h", ":split<CR>")
-nnoremap("<leader>+", ":vertical resize +5<CR>")
-nnoremap("<leader>-", ":vertical resize -5<CR>")
+-- Split navigation
+nnoremap("sh", "<C-w>h")
+nnoremap("sj", "<C-w>j")
+nnoremap("sk", "<C-w>k")
+nnoremap("sl", "<C-w>l")
+
+nnoremap("<leader>v", ":vsplit<CR>", { silent = true })
+nnoremap("<leader>h", ":split<CR>", { silent = true })
+nnoremap("<leader>+", ":vertical resize +5<CR>", { silent = true })
+nnoremap("<leader>-", ":vertical resize -5<CR>", { silent = true })
 
 -- Tab navigation
 nnoremap("<TAB>",   ":bnext<CR>")
 nnoremap("<S-TAB>", ":bprevious<CR>")
 
 -- Telescope
-nnoremap("ff", ":Telescope<CR>")
-nnoremap("fo", ":Telescope oldfiles<CR>")
-nnoremap("fb", ":Telescope buffers<CR>")
-nnoremap("<leader>f", ":Telescope find_files<CR>")
+nnoremap("ff", ":Telescope<CR>", { silent = true })
+nnoremap("fo", ":Telescope oldfiles<CR>", { silent = true })
+nnoremap("fb", ":Telescope buffers<CR>", { silent = true })
+nnoremap("<leader>f", ":Telescope find_files<CR>", { silent = true })
 
 -- Bugger delete
 nnoremap("<leader>b", ":Bdelete menu<CR>")
