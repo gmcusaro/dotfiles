@@ -26,6 +26,13 @@ require('packer').startup(function(use)
 
     use 'neovim/nvim-lspconfig'
 
+    use 'onsails/lspkind-nvim'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/nvim-cmp'
+
+    use 'L3MON4D3/LuaSnip'
+
     use 'ur4ltz/surround.nvim'
 
     use {'numToStr/Comment.nvim',
