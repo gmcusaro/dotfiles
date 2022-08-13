@@ -17,15 +17,18 @@ require('packer').startup(function(use)
     }
 
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-    use {'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
+
+    use {'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim' }
 
     use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 
     use {'hoob3rt/lualine.nvim', require = {'kyazdani42/nvim-web-devicons', opt = true}}
+
+    use 'neovim/nvim-lspconfig'
+
     use 'ur4ltz/surround.nvim'
 
-    use {
-        'numToStr/Comment.nvim',
+    use {'numToStr/Comment.nvim',
         config = function()
             require('Comment').setup()
         end
