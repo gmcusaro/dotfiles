@@ -17,6 +17,10 @@ require('lualine').setup  {
             'filename',
             file_status = true,
             path = 0,
+            symbols = {
+                modified = ' ●',
+                readonly = ' '
+            }
         } },
         lualine_x = { },
         lualine_y = { 'filetype', 'encoding', 'location' },
