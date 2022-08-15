@@ -1,9 +1,9 @@
 local Remap = require("gio.keymaps")
 local nnoremap = Remap.nnoremap
 local vnoremap = Remap.vnoremap
-local inoremap = Remap.inoremap
-local xnoremap = Remap.xnoremap
-local nmap     = Remap.nmap
+-- local inoremap = Remap.inoremap
+-- local xnoremap = Remap.xnoremap
+-- local nmap     = Remap.nmap
 
 nnoremap("<leader>e", ":Ex<CR>")
 -- nnoremap("<leader>e", ":Lexplore<CR>")

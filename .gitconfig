@@ -1,5 +1,6 @@
 [user]
     name = Giovanni Maria Cusaro
+    email = gcusaro@me.com
 [alias]
     ga  = git add
     gst = git status

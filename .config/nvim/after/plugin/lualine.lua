@@ -2,7 +2,7 @@ local neogit_extension = {
   filetypes = {'NeogitStatus', 'NeogitCommitMessage', 'NeogitPopup', 'NeogitLogView', 'NeogitGitCommandHistory'}
 }
 
-require('lualine').setup  {
+require('lualine').setup {
     options = {
         section_separators = { left = '', right = '' },
         component_separators = '',

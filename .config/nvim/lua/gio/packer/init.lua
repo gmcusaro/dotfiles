@@ -1,7 +1,9 @@
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    vim.cmd [[packadd packer.nvim]]
 end
 
 require('packer').startup(function(use)
@@ -18,14 +20,13 @@ require('packer').startup(function(use)
 
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
-    use {'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim' }
+    use {'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim'}
 
-    use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+    use {'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim'}
 
-    use {'hoob3rt/lualine.nvim', require = {'kyazdani42/nvim-web-devicons', opt = true}}
+    use {'hoob3rt/lualine.nvim', require = 'kyazdani42/nvim-web-devicons', opt = true}
 
     use 'neovim/nvim-lspconfig'
-
     use 'onsails/lspkind-nvim'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-nvim-lsp'
