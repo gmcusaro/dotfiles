@@ -1,18 +1,27 @@
 require'nvim-treesitter.configs'.setup {
-  -- A list of parser names, or "all"
-  ensure_installed = { 'c', 'lua', 'rust', 'css', 'javascript', 'html', 'markdown' },
-
-  -- Install parsers synchronously (only applied to `ensure_installed`)
-  sync_install = false,
-
-  -- Automatically install missing parsers when entering buffer
-  auto_install = false,
-
-  -- List of parsers to ignore installing (for "all")
-  ignore_install = { "" },
-
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
-  },
+    -- sync_install = false,
+    -- auto_install = false,
+    -- ignore_install = { "" },
+    ensure_installed = {
+        'c',
+        'lua',
+        'rust',
+        'css',
+        'javascript',
+        'html',
+        'markdown',
+        'json',
+    },
+    highlight = {
+        enable = true,
+        -- additional_vim_regex_highlighting = false,
+        disable = {}
+    },
+    indent =  {
+        enable = true,
+        disable = {}
+    },
+    autotag = {
+        enable = true
+    }
 }

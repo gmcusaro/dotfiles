@@ -1,5 +1,5 @@
 local cmp = require('cmp')
--- local lspkind = require('lspkind')
+local lspkind = require('lspkind')
 
 cmp.setup({
     snippet = {
@@ -24,12 +24,10 @@ cmp.setup({
         -- { name = 'luasnip' },
         { name = 'buffer' }
     }),
-    -- formatting = {
-    --     format = lspkind.cmp_format({
-    --         wirth_text = false,
-    --         maxwidth = 50,
-    --     }),
-    -- },
+    formatting = {
+        format = lspkind.cmp_format({
+            wirth_text = false,
+            maxwidth = 50,
+        }),
+    },
 })
-
-local miao = m

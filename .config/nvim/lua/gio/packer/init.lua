@@ -16,19 +16,15 @@ require('packer').startup(function(use)
             vim.cmd('colorscheme rose-pine')
         end
     }
-    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-    use {'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim'}
-    use {'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim'}
-    use {
-      'nvim-lualine/lualine.nvim',
-      requires = {'kyazdani42/nvim-web-devicons', opt = true}
-    }
+    use {'nvim-treesitter/nvim-treesitter', run = {':TSUpdate'}}
+    use {'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim'}}
+    use {'TimUntersberger/neogit', requires = {'nvim-lua/plenary.nvim'}}
+    use {'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
     use 'neovim/nvim-lspconfig'
     use 'onsails/lspkind-nvim'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/nvim-cmp'
-
     use 'L3MON4D3/LuaSnip'
     use 'ur4ltz/surround.nvim'
     use {'numToStr/Comment.nvim',
@@ -36,7 +32,9 @@ require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
-    use {'jdhao/better-escape.vim', event = 'InsertEnter*'}
+    use 'windwp/nvim-ts-autotag'
+    use 'windwp/nvim-autopairs'
+    use {'jdhao/better-escape.vim', event = {'InsertEnter'}}
     use 'Asheq/close-buffers.vim'
 
     if packer_bootstrap then
