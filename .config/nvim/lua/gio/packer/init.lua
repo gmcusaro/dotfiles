@@ -16,9 +16,11 @@ require('packer').startup(function(use)
             vim.cmd('colorscheme rose-pine')
         end
     }
+    use {'nvim-lua/plenary.nvim'} -- Common Utilities
     use {'nvim-treesitter/nvim-treesitter', run = {':TSUpdate'}}
-    use {'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim'}}
-    use {'TimUntersberger/neogit', requires = {'nvim-lua/plenary.nvim'}}
+    use {'nvim-telescope/telescope.nvim', --[[ requires = {'nvim-lua/plenary.nvim'} ]]}
+    use {'nvim-telescope/telescope-file-browser.nvim'}
+    use {'TimUntersberger/neogit', --[[ requires = {'nvim-lua/plenary.nvim'} ]]}
     use {'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
     use 'neovim/nvim-lspconfig'
     use 'onsails/lspkind-nvim'
