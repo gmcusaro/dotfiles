@@ -20,8 +20,12 @@ require('packer').startup(function(use)
     use {'nvim-treesitter/nvim-treesitter', run = {':TSUpdate'}}
     use {'nvim-telescope/telescope.nvim', --[[ requires = {'nvim-lua/plenary.nvim'} ]]}
     use {'nvim-telescope/telescope-file-browser.nvim'}
+    use {'nvim-telescope/telescope-live-grep-args.nvim'}
+
     use {'TimUntersberger/neogit', --[[ requires = {'nvim-lua/plenary.nvim'} ]]}
+
     use {'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
+
     use 'neovim/nvim-lspconfig'
     use 'onsails/lspkind-nvim'
     use 'hrsh7th/cmp-buffer'
