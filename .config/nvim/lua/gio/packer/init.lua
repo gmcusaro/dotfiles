@@ -8,6 +8,7 @@ end
 
 require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
+
     use {
         'rose-pine/neovim',
         as = 'rose-pine',
@@ -16,15 +17,16 @@ require('packer').startup(function(use)
             vim.cmd('colorscheme rose-pine')
         end
     }
-    use {'nvim-lua/plenary.nvim'} -- Common Utilities
-    use {'nvim-treesitter/nvim-treesitter', run = {':TSUpdate'}}
-    use {'nvim-telescope/telescope.nvim', --[[ requires = {'nvim-lua/plenary.nvim'} ]]}
-    use {'nvim-telescope/telescope-file-browser.nvim'}
-    use {'nvim-telescope/telescope-live-grep-args.nvim'}
 
-    use {'TimUntersberger/neogit', --[[ requires = {'nvim-lua/plenary.nvim'} ]]}
+    use {'TimUntersberger/neogit'}
 
     use {'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
+
+    use {'nvim-lua/plenary.nvim'} -- Common Utilities
+    use {'nvim-treesitter/nvim-treesitter', run = {':TSUpdate'}}
+    use {'nvim-telescope/telescope.nvim'}
+    use {'nvim-telescope/telescope-file-browser.nvim'}
+    use {'nvim-telescope/telescope-live-grep-args.nvim'}
 
     use 'neovim/nvim-lspconfig'
     use 'onsails/lspkind-nvim'
@@ -32,6 +34,7 @@ require('packer').startup(function(use)
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/nvim-cmp'
     use 'L3MON4D3/LuaSnip'
+
     use 'ur4ltz/surround.nvim'
     use {'numToStr/Comment.nvim',
         config = function()
