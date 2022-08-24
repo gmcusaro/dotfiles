@@ -18,9 +18,9 @@ git clone --bare git@github.com:gmcusaro/dotfiles.git $HOME/.dotfiles
 
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-dotfiles config --local status.showUntrackedFiles no
+dot config --local status.showUntrackedFiles no
 
-dotfiles checkout
+dot checkout
 ```
 
 ## Licence
