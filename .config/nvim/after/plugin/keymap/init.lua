@@ -24,6 +24,6 @@ nnoremap("<leader>-", ":vertical resize -5<CR>", { silent = true })
 nnoremap("<TAB>",   ":bnext<CR>")
 nnoremap("<S-TAB>", ":bprevious<CR>")
 
--- Bugger delete
+-- Buffer delete
 nnoremap("<leader>b", ":Bdelete menu<CR>")
 nnoremap("<leader>t", ":Bdelete this<CR>")
