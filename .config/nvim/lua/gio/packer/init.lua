@@ -9,6 +9,8 @@ end
 require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
+    use {'nvim-lua/plenary.nvim'} -- Common Utilities
+
     use {
         'rose-pine/neovim',
         as = 'rose-pine',
@@ -19,12 +21,12 @@ require('packer').startup(function(use)
     }
 
     use {'TimUntersberger/neogit'}
+    use {'sindrets/diffview.nvim'}
     use {'lewis6991/gitsigns.nvim'}
 
     use {'kyazdani42/nvim-web-devicons'}
-    use {'nvim-lualine/lualine.nvim', --[[ requires = {'kyazdani42/nvim-web-devicons', opt = true} ]]}
+    use {'nvim-lualine/lualine.nvim'}
 
-    use {'nvim-lua/plenary.nvim'} -- Common Utilities
     use {'nvim-treesitter/nvim-treesitter', run = {':TSUpdate'}}
     use {'nvim-telescope/telescope.nvim'}
     use {'nvim-telescope/telescope-file-browser.nvim'}
