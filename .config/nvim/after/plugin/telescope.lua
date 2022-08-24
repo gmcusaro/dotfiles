@@ -44,8 +44,7 @@ telescope.setup({
 telescope.load_extension('file_browser')
 telescope.load_extension('live_grep_args')
 
-local Remap = require("gio.keymaps")
-local nnoremap = Remap.nnoremap
+local nnoremap = require("gio.keymaps").nnoremap
 
 function Old_files()
     local opts = {
