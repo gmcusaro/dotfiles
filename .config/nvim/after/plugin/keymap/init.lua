@@ -5,19 +5,11 @@ local vnoremap = Remap.vnoremap
 -- local xnoremap = Remap.xnoremap
 -- local nmap     = Remap.nmap
 
-nnoremap("<leader>e", ":Ex<CR>")
--- nnoremap("<leader>e", ":Lexplore<CR>")
+nnoremap('x', '"_x') -- Do not yank with x
+vnoremap("<BS>", "\"_d") -- Backspace delete visual mode
+nnoremap('<leader>a', 'gg<S-v>G') -- Select all
 
--- Do not yank with x
-nnoremap('x', '"_x')
-
--- Backspace delete visual mode
-vnoremap("<BS>", "\"_d")
-
--- Select all
-nnoremap('<leader>a', 'gg<S-v>G')
-
--- Split navigation
+-- Navigation - Split - Resize
 nnoremap("sh", "<C-w>h")
 nnoremap("sj", "<C-w>j")
 nnoremap("sk", "<C-w>k")
@@ -31,12 +23,6 @@ nnoremap("<leader>-", ":vertical resize -5<CR>", { silent = true })
 -- Tab navigation
 nnoremap("<TAB>",   ":bnext<CR>")
 nnoremap("<S-TAB>", ":bprevious<CR>")
-
--- Telescope
-nnoremap("ff", ":Telescope<CR>", { silent = true })
-nnoremap("fo", ":Telescope oldfiles<CR>", { silent = true })
-nnoremap("fb", ":Telescope buffers<CR>", { silent = true })
-nnoremap("<leader>f", ":Telescope find_files<CR>", { silent = true })
 
 -- Bugger delete
 nnoremap("<leader>b", ":Bdelete menu<CR>")
