@@ -45,7 +45,7 @@ cmp.setup({
     }),
     formatting = {
         format = lspkind.cmp_format({
-            wirth_text = false,
+            with_text = false,
             maxwidth = 50,
         }),
     },
