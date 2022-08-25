@@ -1,0 +1,18 @@
+[user]
+    name = Giovanni Maria Cusaro
+[alias]
+    ga  = git add
+    gst = git status
+    gp  = git push
+    cm  = commit -m
+[core]
+    editor = neovim
+[init]
+    defaultBranch = main
+[github]
+    user = gmcusaro
+[diff]
+    tool = nvimdiff
+[difftool "nvimdiff"]
+    cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
+    path =
