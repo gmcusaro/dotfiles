@@ -61,7 +61,7 @@ opt.updatetime = 750 -- Stop longer updatetime
 
 opt.confirm = true
 
--- wo.signcolumn = "yes // see gitsign" // see gitsign
+wo.signcolumn = 'yes'
 
 -- wo.colorcolumn = "80" -- da inserire come autocomand regex
 
