@@ -2,6 +2,8 @@ local neogit_extension = {
   filetypes = {'NeogitStatus', 'NeogitCommitMessage', 'NeogitPopup', 'NeogitLogView', 'NeogitGitCommandHistory'}
 }
 
+
+
 require('lualine').setup {
     options = {
         section_separators = { left = '', right = '' },
@@ -19,11 +21,11 @@ require('lualine').setup {
             path = 0,
             symbols = {
                 modified = ' ●',
-                readonly = ' '
+                readonly = ' '
             }
         } },
         lualine_x = { },
-        lualine_y = { 'filetype', 'encoding', 'location' },
+        lualine_y = { 'encoding', 'filetype', 'location' },
         lualine_z = { }
     },
     inactive_sections = {
