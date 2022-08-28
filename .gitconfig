@@ -1,5 +1,4 @@
 [user]
-    name = Giovanni Maria Cusaro
 [alias]
     ga  = git add
     gst = git status
