@@ -7,9 +7,9 @@ telescope.setup({
         prompt_prefix = '  ',
         selection_caret = "* ",
 
-		file_previewer = require('telescope.previewers').vim_buffer_cat.new,
-		grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new,
-		qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
+		-- file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+		-- grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new,
+		-- qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
 
 		mappings = {
             n = {
@@ -60,7 +60,8 @@ function File_browser()
         prompt_title = "~ Browser ~",
         path = '%:p:h',
         previewer = false,
-        initial_mode = 'normal'
+        initial_mode = 'normal',
+        hidden = true
     }
     require "telescope".extensions.file_browser.file_browser(opts)
 end
@@ -79,6 +80,7 @@ function Find_files()
         prompt_title = "~ Find files ~",
         cwd = "~/.config/nvim",
         previewer = false,
+        hidden = true
     }
     require("telescope.builtin").find_files(opts)
 end
@@ -88,4 +90,4 @@ nnoremap("<leader>f", ":Telescope<CR>", { silent = true })
 nnoremap('fo', '<cmd> lua Old_files()<CR>', { silent = true })
 nnoremap('fb', '<cmd> lua File_browser()<CR>', { silent = true })
 nnoremap('fg', '<cmd> lua Live_grep()<CR>', { silent = true })
-nnoremap('ff', '<cmd> lua Edit_neovim()<CR>', { silent = true })
+nnoremap('ff', '<cmd> lua Find_files()<CR>', { silent = true })
