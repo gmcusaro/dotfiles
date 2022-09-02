@@ -12,6 +12,8 @@ vnoremap('<BS>', '\"_d') -- Backspace delete visual mode
 vnoremap('K', ":m '<-2<CR>gv=gv") -- Move UP
 vnoremap('J', ":m '>+1<CR>gv=gv") -- Move DOWN
 
+nnoremap('Q', ':noh<CR>', { silent = true })
+
 -- Navigation - Split - Resize
 nnoremap('sh', '<C-w>h')
 nnoremap('sj', '<C-w>j')
@@ -24,8 +26,8 @@ nnoremap('<leader>+', ':vertical resize +5<CR>', { silent = true })
 nnoremap('<leader>-', ':vertical resize -5<CR>', { silent = true })
 
 -- Tab navigation
-nnoremap('<TAB>',   ':bnext<CR>')
-nnoremap('<S-TAB>', ':bprevious<CR>')
+nnoremap('<TAB>',   ':bnext<CR>', { silent = true })
+nnoremap('<S-TAB>', ':bprevious<CR>', { silent = true })
 
 -- Buffer delete
 nnoremap('<leader>b', ':Bdelete menu<CR>')

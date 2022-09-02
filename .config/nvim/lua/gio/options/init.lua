@@ -43,7 +43,7 @@ opt.smartindent = true
 opt.smartcase = true
 
 -- Search
-opt.hlsearch = false
+opt.hlsearch = true
 opt.incsearch = true
 opt.ignorecase = true
 g.showmatch = true
