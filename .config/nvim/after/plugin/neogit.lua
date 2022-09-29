@@ -24,8 +24,4 @@ nnoremap('<leader>gs', function()
     neogit.open({ kind = "split_above" })
 end, { silent = true })
 
-nnoremap('<leader>go', function()
-    neogit.open({ cmd = "~"})
-end)
-
 nnoremap("<leader>gf", "<cmd>!git fetch --all<CR>", { silent = true });
