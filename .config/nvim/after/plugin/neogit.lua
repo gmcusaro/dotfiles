@@ -4,10 +4,13 @@ neogit.setup {
     popup = {
         kind = "split_above",
     },
+    commit_popup = {
+        kind = "floating"
+    },
     -- TODO: see how it works
-    -- integrations = {
-    --     diffview = true
-    -- },
+    integrations = {
+        diffview = true
+    },
     disable_commit_confirmation = true,
 }
 
@@ -18,5 +21,11 @@ nnoremap('<leader>gc', function()
 end, { silent = true })
 
 nnoremap('<leader>gs', function()
-    neogit.open({ kind = 'split_above' })
+    neogit.open({ kind = "split_above" })
 end, { silent = true })
+
+nnoremap('<leader>go', function()
+    neogit.open({ cmd = "~"})
+end)
+
+nnoremap("<leader>gf", "<cmd>!git fetch --all<CR>", { silent = true });
