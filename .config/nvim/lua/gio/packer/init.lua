@@ -20,8 +20,9 @@ require('packer').startup(function(use)
         end
     }
 
-    use {'TimUntersberger/neogit'}
-    use {'sindrets/diffview.nvim'}
+    use {'TimUntersberger/neogit', requires = {
+        'sindrets/diffview.nvim'
+    }}
     use {'lewis6991/gitsigns.nvim'}
 
     use {'kyazdani42/nvim-web-devicons'}
