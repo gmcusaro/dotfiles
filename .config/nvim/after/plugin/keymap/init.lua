@@ -30,5 +30,5 @@ nnoremap('<TAB>',   ':bnext<CR>', { silent = true })
 nnoremap('<S-TAB>', ':bprevious<CR>', { silent = true })
 
 -- Buffer delete
-nnoremap('<leader>b', ':Bdelete menu<CR>')
-nnoremap('<leader>t', ':Bdelete this<CR>')
+nnoremap('<leader>b', ':Bdelete menu<CR>', { silent = true })
+nnoremap('<leader>t', ':Bdelete this<CR>', { silent = true })
