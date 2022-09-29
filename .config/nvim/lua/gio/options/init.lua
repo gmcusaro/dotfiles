@@ -26,6 +26,7 @@ opt.sidescrolloff = 5
 opt.errorbells = true
 
 opt.number = true
+opt.relativenumber = true
 opt.numberwidth = 5     -- valutare per distanziare i numeri dai simboli git
 
 opt.cursorline = true
