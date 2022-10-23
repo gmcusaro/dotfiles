@@ -6,5 +6,6 @@
 --     `88888'  dP   dP   dP  Y88888P'
 
 -- Warning: Don't use this settings unless you know what that entails
+-- Learn more https://www.github.com/gmcusaro/dotfiles
 
 require("gio")
