@@ -38,22 +38,6 @@ autocmd('TextYankPost', {
     end,
 })
 
--- local au = require("gio.autocomands")
--- local au = require('gio.au')
-
--- au.define_augroups({
---     _general_settings = {
---         {'BufWinEnter', '*', 'setlocal formatoptions-=r formatoptions-=o'},
---         {'BufRead', '*', 'setlocal formatoptions-=r formatoptions-=o'},
---         {'BufNewFile', '*', 'setlocal formatoptions-=r formatoptions-=o'},
---         {'FocusLost, WinLeave', '*', 'wall'},
---         {'BufReadPre', '*', 'filetype plugin indent on'},
---         {'BufWritePre', '*', '%s/\\s\\+$//e'},
---         {'BufWritePost', 'plugin.lua', 'source <afile> | PackerCompile'},
---         -- {'BufRead', '*', '%s/\\t\\+$/\\s/g'},
---     },
--- })
-
 -- function()
 --     vim.highlight.on_yank { higroup = 'IncSearch', timeout = 500 }
 -- end
