@@ -9,8 +9,8 @@ nnoremap('x', '"_x') -- Do not yank with x
 nnoremap('<leader>a', 'gg<S-v>G') -- Select all
 
 vnoremap('<BS>', '\"_d') -- Backspace delete visual mode
-vnoremap('K', ":m '<-2<CR>gv=gv") -- Move UP
-vnoremap('J', ":m '>+1<CR>gv=gv") -- Move DOWN
+vnoremap('K', ":m '<-2<CR>gv=gv", { silent = true }) -- Move UP
+vnoremap('J', ":m '>+1<CR>gv=gv", { silent = true }) -- Move DOWN
 
 nnoremap('Q', ':noh<CR>', { silent = true })
 
