@@ -2,13 +2,11 @@ local neogit_extension = {
   filetypes = {'NeogitStatus', 'NeogitCommitMessage', 'NeogitPopup', 'NeogitLogView', 'NeogitGitCommandHistory'}
 }
 
-
-
 require('lualine').setup {
     options = {
         section_separators = { left = '', right = '' },
         component_separators = '',
-        theme = "rose-pine",
+        theme = "duskfox",
         icons_enabled = true,
         disabled_filetypes = { 'NeogitStatus', 'Packer' },
     },
