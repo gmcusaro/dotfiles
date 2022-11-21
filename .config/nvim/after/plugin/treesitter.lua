@@ -1,6 +1,6 @@
 require'nvim-treesitter.configs'.setup {
-    -- sync_install = false,
-    -- auto_install = false,
+    sync_install = true,
+    auto_install = true,
     -- ignore_install = { "" },
     ensure_installed = {
         'c',
