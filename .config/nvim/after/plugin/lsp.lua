@@ -18,7 +18,7 @@ local on_attach = function(_, bufnr)
     })
 end
 
-local servers = { "sumneko_lua" }
+local servers = { "sumneko_lua", "marksman" }
 
 local settings = {
     Lua = {
@@ -39,6 +39,7 @@ local settings = {
 }
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup({
         capabilities = capabilities,
