@@ -1,11 +1,11 @@
 local nvim_lsp = require('lspconfig')
 
 local on_attach = function(_, bufnr)
-    vim.keymap.set("n", "D", vim.lsp.buf.declaration, { buffer = bufnr })
-    vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = bufnr })
+    vim.keymap.set("n", "<leader>d", vim.lsp.buf.declaration, { buffer = bufnr })
+    vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, { buffer = bufnr })
     vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end)
     vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { buffer = bufnr })
-    vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { buffer = bufnr })
+    vim.keymap.set("n", "<leader>di", vim.diagnostic.open_float, { buffer = bufnr })
     vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { buffer = bufnr })
     vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { buffer = bufnr })
 
