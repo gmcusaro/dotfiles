@@ -1,12 +1,12 @@
 local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+    local fn = vim.fn
+    local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+    if fn.empty(fn.glob(install_path)) > 0 then
+        fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+        vim.cmd [[packadd packer.nvim]]
+        return true
+    end
+    return false
 end
 
 local packer_bootstrap = ensure_packer()
@@ -36,9 +36,18 @@ require('packer').startup(function(use)
     use {'nvim-lualine/lualine.nvim'}
 
     use {'nvim-treesitter/nvim-treesitter', run = {':TSUpdate'}}
-    use {'nvim-telescope/telescope.nvim'}
+    -- use {'nvim-telescope/telescope.nvim'}
     use {'nvim-telescope/telescope-file-browser.nvim'}
-    use {'nvim-telescope/telescope-live-grep-args.nvim'}
+    -- use {'nvim-telescope/telescope-live-grep-args.nvim'}
+    use {
+        "nvim-telescope/telescope.nvim",
+        requires = {
+            { "nvim-telescope/telescope-live-grep-args.nvim" },
+        },
+        config = function()
+            require("telescope").load_extension("live_grep_args")
+        end
+    }
 
     use 'neovim/nvim-lspconfig'
     use 'onsails/lspkind-nvim'
