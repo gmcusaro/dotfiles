@@ -37,15 +37,13 @@ telescope.setup({
             file_browser = {
                 theme = 'dropdown',
                 hijack_netrw = true,
+            },
+            live_grep_args = {
+               auto_quoting = false,
             }
         }
     }
 })
-
-telescope.load_extension('file_browser')
-telescope.load_extension('live_grep_args')
-
-local nnoremap = require("gio.keymaps").nnoremap
 
 function Old_files()
     local opts = {
@@ -63,14 +61,25 @@ function File_browser()
         initial_mode = 'normal',
         hidden = true
     }
-    require "telescope".extensions.file_browser.file_browser(opts)
+    telescope.extensions.file_browser.file_browser(opts)
+end
+
+local current_selection = require('gio.utils').current_selection
+
+function Live_grep_selection()
+    local opts = {
+        prompt_title = "~ Live grep ~",
+        previewer = false,
+        default_text = current_selection()
+    }
+    require("telescope.builtin").live_grep(opts)
 end
 
 function Live_grep()
     local opts = {
         prompt_title = "~ Live grep ~",
-        cwd = "~/.config/nvim",
         previewer = false,
+        default_text = ""
     }
     require("telescope.builtin").live_grep(opts)
 end
@@ -78,16 +87,18 @@ end
 function Find_files()
     local opts = {
         prompt_title = "~ Find files ~",
-        cwd = "~/.config/nvim",
         previewer = false,
         hidden = true
     }
     require("telescope.builtin").find_files(opts)
 end
 
--- Telescope
+local nnoremap = require("gio.keymaps").nnoremap
+local vnoremap = require("gio.keymaps").vnoremap
+
 nnoremap("<leader>f", ":Telescope<CR>", { silent = true })
 nnoremap('fo', '<cmd> lua Old_files()<CR>', { silent = true })
 nnoremap('fb', '<cmd> lua File_browser()<CR>', { silent = true })
 nnoremap('fg', '<cmd> lua Live_grep()<CR>', { silent = true })
+vnoremap('fg', '<cmd> lua Live_grep_selection()<CR>', { silent = true })
 nnoremap('ff', '<cmd> lua Find_files()<CR>', { silent = true })
