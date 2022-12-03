@@ -10,6 +10,7 @@ require'nvim-treesitter.configs'.setup {
         'javascript',
         'html',
         'markdown',
+        'markdown_inline',
         'json',
     },
     highlight = {
