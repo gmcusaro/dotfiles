@@ -28,6 +28,11 @@ nnoremap('<leader>h', ':split<CR>', silent)
 nnoremap('<leader>+', ':vertical resize +5<CR>', silent)
 nnoremap('<leader>-', ':vertical resize -5<CR>', silent)
 
+nnoremap('<C-d>', '<C-d>zz', silent)
+nnoremap('<C-u>', '<C-u>zz', silent)
+nnoremap('n', 'nzzzv')
+nnoremap('N', 'Nzzzv')
+
 -- Tab navigation
 nnoremap('<TAB>',   ':bnext<CR>', silent)
 nnoremap('<S-TAB>', ':bprevious<CR>', silent)
