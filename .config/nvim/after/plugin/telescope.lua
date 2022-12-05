@@ -1,17 +1,17 @@
-local telescope =  require('telescope')
+local telescope = require('telescope')
 local actions = require('telescope.actions')
 local fb_actions = require('telescope').extensions.file_browser.actions
 
 telescope.setup({
-	defaults = {
+    defaults = {
         prompt_prefix = '  ',
         selection_caret = "* ",
 
-		-- file_previewer = require('telescope.previewers').vim_buffer_cat.new,
-		-- grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new,
-		-- qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
+        -- file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+        -- grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new,
+        -- qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
 
-		mappings = {
+        mappings = {
             n = {
                 ['q'] = actions.close,
                 ['o'] = fb_actions.open,
@@ -21,12 +21,12 @@ telescope.setup({
                 ['R'] = fb_actions.rename,
                 ['-'] = fb_actions.goto_parent_dir,
             },
-			i = {
+            i = {
                 ['jk'] = actions.close,
                 ['<Tab>'] = actions.move_selection_next,
                 ["<S-Tab>"] = actions.move_selection_previous,
-			},
-		},
+            },
+        },
 
         layout_config = {
             prompt_position = 'top',
@@ -39,7 +39,7 @@ telescope.setup({
                 hijack_netrw = true,
             },
             live_grep_args = {
-               auto_quoting = false,
+                auto_quoting = false,
             }
         }
     }
@@ -64,9 +64,8 @@ function File_browser()
     telescope.extensions.file_browser.file_browser(opts)
 end
 
-local current_selection = require('gio.utils').current_selection
-
 function Live_grep_selection()
+    local current_selection = require('gio.utils').current_selection
     local opts = {
         prompt_title = "~ Live grep ~",
         previewer = false,
