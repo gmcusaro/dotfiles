@@ -8,12 +8,12 @@ autocmd('BufWritePost', {
     command = 'source <afile> | PackerCompile'
 })
 
-autocmd({'BufWinEnter', 'BufRead', 'BufNewFile'}, {
+autocmd({ 'BufWinEnter', 'BufRead', 'BufNewFile' }, {
     pattern = '*',
     command = 'setlocal formatoptions-=r formatoptions-=o'
 })
 
-autocmd({'FocusLost', 'WinLeave'}, {
+autocmd({ 'FocusLost', 'WinLeave' }, {
     pattern = '*',
     command = 'wall'
 })
@@ -21,6 +21,12 @@ autocmd({'FocusLost', 'WinLeave'}, {
 autocmd('BufWritePre', {
     pattern = '*',
     command = "%s/\\s\\+$//e",
+})
+
+autocmd('BufWritePre', {
+    pattern = '*',
+    desc = 'Run LSP formatting on save',
+    command = ':Format'
 })
 
 autocmd('BufReadPre', {
