@@ -1,13 +1,25 @@
 local nvim_lsp = require('lspconfig')
 
+local format_sync = function()
+    vim.lsp.buf.format({ async = false })
+end
+
 local on_attach = function(_, bufnr)
-    vim.keymap.set("n", "<leader>d", vim.lsp.buf.declaration, { buffer = bufnr })
-    vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, { buffer = bufnr })
+
+    local opts = {
+        noremap = true,
+        silent = true,
+        buffer = bufnr,
+    }
+
+    vim.keymap.set("n", "<leader>d", vim.lsp.buf.declaration, opts)
+    vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, opts)
     -- vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end)
     -- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { buffer = bufnr })
     -- vim.keymap.set("n", "<leader>di", vim.diagnostic.open_float, { buffer = bufnr })
     -- vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { buffer = bufnr })
     -- vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { buffer = bufnr })
+    vim.keymap.set('n', '<C-f>', format_sync, opts)
 
     vim.api.nvim_create_user_command("Format", vim.lsp.buf.formatting, {})
     vim.diagnostic.config({
@@ -66,7 +78,7 @@ local settings = {
             version = 'LuaJIT',
         },
         diagnostics = {
-            globals = {'vim'},
+            globals = { 'vim' },
         },
         workspace = {
             library = vim.api.nvim_get_runtime_file("", true),
