@@ -23,12 +23,6 @@ autocmd('BufWritePre', {
     command = "%s/\\s\\+$//e",
 })
 
-autocmd('BufWritePre', {
-    pattern = '*',
-    desc = 'Run LSP formatting on save',
-    command = ':Format'
-})
-
 autocmd('BufReadPre', {
     pattern = '*',
     command = 'filetype plugin indent on'
@@ -43,38 +37,3 @@ autocmd('TextYankPost', {
         })
     end,
 })
-
--- function()
---     vim.highlight.on_yank { higroup = 'IncSearch', timeout = 500 }
--- end
-
--- -- Blink on yank
--- au.TextYankPost = function()
---     vim.highlight.on_yank({ higroup = 'Visual', timeout = 120 })
--- end
---
--- -- Packer
--- au.group('PackerGroup', {
---     { 'BufWritePost', 'plugins.lua', 'source <afile> | PackerCompile' },
--- })
---
--- au.BufEnter = {
---     '*.txt',
---     function()
---         if vim.bo.buftype == 'help' then
---             cmd('wincmd L')
---             local nr = vim.api.nvim_get_current_buf()
---             vim.api.nvim_buf_set_keymap(nr, 'n', 'q', ':q<CR>', { noremap = true, silent = true })
---         end
---     end,
--- }
---
--- -- au({ 'BufWinEnter', 'BufRead', 'BufNewFile'}, {
--- -- })
---
--- au({ 'BufNewFile', 'BufRead' }, {
---     '.eslintrc,.prettierrc,*.json*',
---     function()
---         vim.bo.filetype = 'json'
---     end,
--- })
