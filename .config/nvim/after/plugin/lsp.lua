@@ -4,6 +4,10 @@ local format_sync = function()
     vim.lsp.buf.format({ async = false })
 end
 
+local rename = function ()
+   vim.lsp.buf.rename()
+end
+
 local on_attach = function(_, bufnr)
 
     local opts = {
@@ -14,7 +18,7 @@ local on_attach = function(_, bufnr)
 
     vim.keymap.set("n", "<leader>d", vim.lsp.buf.declaration, opts)
     vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, opts)
-    -- vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end)
+    vim.keymap.set("n", "<leader>rn", rename, opts)
     -- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { buffer = bufnr })
     -- vim.keymap.set("n", "<leader>di", vim.diagnostic.open_float, { buffer = bufnr })
     -- vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { buffer = bufnr })
