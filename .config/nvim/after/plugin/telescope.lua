@@ -14,7 +14,6 @@ telescope.setup({
         mappings = {
             n = {
                 ['q'] = actions.close,
-                ['o'] = fb_actions.open,
                 ['N'] = fb_actions.create,
                 ['M'] = fb_actions.move,
                 ['D'] = fb_actions.remove,
@@ -96,8 +95,8 @@ local nnoremap = require("gio.keymaps").nnoremap
 local vnoremap = require("gio.keymaps").vnoremap
 
 nnoremap("<leader>f", ":Telescope<CR>", { silent = true })
-nnoremap('fo', '<cmd> lua Old_files()<CR>', { silent = true })
-nnoremap('fb', '<cmd> lua File_browser()<CR>', { silent = true })
-nnoremap('fg', '<cmd> lua Live_grep()<CR>', { silent = true })
-vnoremap('fg', '<cmd> lua Live_grep_selection()<CR>', { silent = true })
-nnoremap('ff', '<cmd> lua Find_files()<CR>', { silent = true })
+nnoremap('<leader>fo', '<cmd> lua Old_files()<CR>', { silent = true })
+nnoremap('<leader>fb', '<cmd> lua File_browser()<CR>', { silent = true })
+nnoremap('<leader>fg', '<cmd> lua Live_grep()<CR>', { silent = true })
+vnoremap('<leader>fg', '<cmd> lua Live_grep_selection()<CR>', { silent = true })
+nnoremap('<leader>ff', '<cmd> lua Find_files()<CR>', { silent = true })
