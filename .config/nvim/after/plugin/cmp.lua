@@ -14,8 +14,8 @@ cmp.setup({
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
         ['<CR>'] = cmp.mapping.confirm({
-          behavior = cmp.ConfirmBehavior.Replace,
-          select = true,
+            behavior = cmp.ConfirmBehavior.Replace,
+            select = true,
         }),
         -- ['<C-k>'] = cmp.mapping.select_prev_item(),
         -- ['<C-j>'] = cmp.mapping.select_next_item(),
