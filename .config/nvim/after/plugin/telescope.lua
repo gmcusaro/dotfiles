@@ -91,12 +91,13 @@ function Find_files()
     require("telescope.builtin").find_files(opts)
 end
 
-local nnoremap = require("gio.keymaps").nnoremap
-local vnoremap = require("gio.keymaps").vnoremap
+local keymaps = require("gio.keymaps")
+local nnoremap = keymaps.nnoremap
+local vnoremap = keymaps.vnoremap
 
-nnoremap("<leader>f", ":Telescope<CR>", { silent = true })
-nnoremap('<leader>fo', '<cmd> lua Old_files()<CR>', { silent = true })
-nnoremap('<leader>fb', '<cmd> lua File_browser()<CR>', { silent = true })
-nnoremap('<leader>fg', '<cmd> lua Live_grep()<CR>', { silent = true })
-vnoremap('<leader>fg', '<cmd> lua Live_grep_selection()<CR>', { silent = true })
-nnoremap('<leader>ff', '<cmd> lua Find_files()<CR>', { silent = true })
+nnoremap("<leader>f", ":Telescope<CR>", keymaps.opts)
+nnoremap('<leader>fo', '<cmd> lua Old_files()<CR>', keymaps.opts)
+nnoremap('<leader>fb', '<cmd> lua File_browser()<CR>', keymaps.opts)
+nnoremap('<leader>fg', '<cmd> lua Live_grep()<CR>', keymaps.opts)
+vnoremap('<leader>fg', '<cmd> lua Live_grep_selection()<CR>', keymaps.opts)
+nnoremap('<leader>ff', '<cmd> lua Find_files()<CR>', keymaps.opts)
