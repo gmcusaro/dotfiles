@@ -16,16 +16,7 @@ require('packer').startup(function(use)
 
     use { 'nvim-lua/plenary.nvim' } -- Common Utilities
 
-    -- use {
-    --     'rose-pine/neovim',
-    --     as = 'rose-pine',
-    --     tag = 'v1.*',
-    --     config = function()
-    --         vim.cmd('colorscheme rose-pine')
-    --     end
-    -- }
-
-    use "EdenEast/nightfox.nvim"
+    use { 'catppuccin/nvim', as = 'catppuccin' }
 
     use { 'TimUntersberger/neogit', requires = {
         'sindrets/diffview.nvim'
@@ -39,15 +30,6 @@ require('packer').startup(function(use)
     use { 'nvim-telescope/telescope.nvim' }
     use { 'nvim-telescope/telescope-file-browser.nvim' }
     use { 'nvim-telescope/telescope-live-grep-args.nvim' }
-    -- use {
-    --     "nvim-telescope/telescope.nvim",
-    --     requires = {
-    --         { "nvim-telescope/telescope-live-grep-args.nvim" },
-    --     },
-    --     config = function()
-    --         require("telescope").load_extension("live_grep_args")
-    --     end
-    -- }
 
     use 'neovim/nvim-lspconfig'
     use 'onsails/lspkind-nvim'
@@ -68,7 +50,7 @@ require('packer').startup(function(use)
     use 'Asheq/close-buffers.vim'
 
     -- for fun
-    use 'epwalsh/obsidian.nvim'
+    use 'namjul/dendron.nvim'
 
     if packer_bootstrap then
         require('packer').sync()
