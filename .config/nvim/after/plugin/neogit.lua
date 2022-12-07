@@ -7,21 +7,24 @@ neogit.setup {
     commit_popup = {
         kind = "floating"
     },
-    -- TODO: see how it works
+    -- TODO: check how it works
     integrations = {
         diffview = true
     },
     disable_commit_confirmation = true,
 }
 
-local nnoremap = require('gio.keymaps').nnoremap
+local keymap = require('gio.keymaps')
+local nnoremap = keymap.nnoremap
 
-nnoremap('<leader>gc', function()
+local function openCommit()
     neogit.open({ 'commit' })
-end, { silent = true })
+end
 
-nnoremap('<leader>gs', function()
+local function openSplit()
     neogit.open({ kind = "split_above" })
-end, { silent = true })
+end
 
-nnoremap("<leader>gf", "<cmd>!git fetch --all<CR>", { silent = true });
+nnoremap('<leader>gc', openCommit, keymap.opts)
+nnoremap('<leader>gs', openSplit, keymap.opts)
+nnoremap("<leader>gf", "<cmd>!git fetch --all<CR>", keymap.opts)
