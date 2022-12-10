@@ -1,21 +1,18 @@
-local Remap = require('gio.keymaps')
+local remap = require('gio.keymaps')
 
-local nnoremap = Remap.nnoremap
-local vnoremap = Remap.vnoremap
+local nnoremap = remap.nnoremap
+local vnoremap = remap.vnoremap
 -- local inoremap = Remap.inoremap
 -- local xnoremap = Remap.xnoremap
 -- local nmap     = Remap.nmap
 
-local silent = { silent = true }
-
 nnoremap('x', '"_x') -- Do not yank with x
+nnoremap('<CR>', ':noh<CR>', remap.opts)  -- Clear highlight result
 nnoremap('<leader>a', 'gg<S-v>G') -- Select all
 
 vnoremap('<BS>', '\"_d') -- Backspace delete visual mode
-vnoremap('K', ":m '<-2<CR>gv=gv", silent) -- Move UP
-vnoremap('J', ":m '>+1<CR>gv=gv", silent) -- Move DOWN
-
-nnoremap('Q', ':noh<CR>', silent)
+vnoremap('K', ":m '<-2<CR>gv=gv", remap.opts) -- Move UP
+vnoremap('J', ":m '>+1<CR>gv=gv", remap.opts) -- Move DOWN
 
 -- Navigation - Split - Resize
 nnoremap('sh', '<C-w>h')
@@ -23,20 +20,20 @@ nnoremap('sj', '<C-w>j')
 nnoremap('sk', '<C-w>k')
 nnoremap('sl', '<C-w>l')
 
-nnoremap('<leader>v', ':vsplit<CR>', silent)
-nnoremap('<leader>h', ':split<CR>', silent)
-nnoremap('<leader>+', ':vertical resize +5<CR>', silent)
-nnoremap('<leader>-', ':vertical resize -5<CR>', silent)
+nnoremap('<leader>v', ':vsplit<CR>', remap.opts)
+nnoremap('<leader>h', ':split<CR>', remap.opts)
+nnoremap('<leader>+', ':vertical resize +5<CR>', remap.opts)
+nnoremap('<leader>-', ':vertical resize -5<CR>', remap.opts)
 
-nnoremap('<C-d>', '<C-d>zz', silent)
-nnoremap('<C-u>', '<C-u>zz', silent)
+nnoremap('<C-d>', '<C-d>zz', remap.opts)
+nnoremap('<C-u>', '<C-u>zz', remap.opts)
 nnoremap('n', 'nzzzv')
 nnoremap('N', 'Nzzzv')
 
 -- Tab navigation
-nnoremap('<TAB>',   ':bnext<CR>', silent)
-nnoremap('<S-TAB>', ':bprevious<CR>', silent)
+nnoremap('<TAB>',   ':bnext<CR>', remap.opts)
+nnoremap('<S-TAB>', ':bprevious<CR>', remap.opts)
 
 -- Buffer delete
-nnoremap('<leader>b', ':Bdelete menu<CR>', silent)
-nnoremap('<leader>t', ':Bdelete this<CR>', silent)
+nnoremap('<leader>b', ':Bdelete menu<CR>', remap.opts)
+nnoremap('<leader>t', ':Bdelete this<CR>', remap.opts)
