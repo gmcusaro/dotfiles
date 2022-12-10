@@ -20,11 +20,6 @@ telescope.setup({
                 ['R'] = fb_actions.rename,
                 ['-'] = fb_actions.goto_parent_dir,
             },
-            i = {
-                ['jk'] = actions.close,
-                ['<Tab>'] = actions.move_selection_next,
-                ["<S-Tab>"] = actions.move_selection_previous,
-            },
         },
 
         layout_config = {
