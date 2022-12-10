@@ -13,13 +13,16 @@ telescope.setup({
 
         mappings = {
             n = {
-                ['q'] = actions.close,
+                ['jk'] = actions.close,
                 ['N'] = fb_actions.create,
                 ['M'] = fb_actions.move,
                 ['D'] = fb_actions.remove,
                 ['R'] = fb_actions.rename,
                 ['-'] = fb_actions.goto_parent_dir,
             },
+            i = {
+                ['jk'] = actions.close
+            }
         },
 
         layout_config = {
