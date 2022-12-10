@@ -6,7 +6,7 @@ require('lualine').setup {
     options = {
         section_separators = { left = '', right = '' },
         component_separators = '',
-        theme = "duskfox",
+        theme = 'catppuccin',
         icons_enabled = true,
         disabled_filetypes = { 'NeogitStatus', 'Packer' },
     },
