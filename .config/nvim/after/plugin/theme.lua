@@ -2,8 +2,9 @@ require('catppuccin').setup({
     flavour = 'mocha',
     color_overrides = {
         mocha = {
-            base = '#03020d',
-            green = '#BBD3A0'
+            green = '#A2CEB4',
+            base = '#181824',
+            mantle = '#11111b'
         }
     }
 })
