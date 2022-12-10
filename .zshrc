@@ -21,7 +21,7 @@ ZSH_DISABLE_COMPFIX="true"
 KEYTIMEOUT=0
 
 # my personal list
-plugins=(git macos ruby yarn zsh-autosuggestions zsh-syntax-highlighting emoji brew web-search)
+plugins=(git macos ruby yarn zsh-autosuggestions zsh-syntax-highlighting emoji brew)
 
 source $ZSH/oh-my-zsh.sh
 
