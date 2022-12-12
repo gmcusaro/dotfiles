@@ -34,6 +34,7 @@ opt.cursorline = true
 opt.cmdheight = 2
 opt.whichwrap = 'b,s,<,>,[,],h,l'
 opt.conceallevel = 0
+opt.linebreak = true
 
 opt.tabstop = 4
 opt.softtabstop = 4
@@ -42,6 +43,7 @@ opt.expandtab = true
 
 opt.smartindent = true
 opt.smartcase = true
+
 
 -- Search
 opt.hlsearch = true
