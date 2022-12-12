@@ -5,15 +5,11 @@ local fb_actions = require('telescope').extensions.file_browser.actions
 telescope.setup({
     defaults = {
         prompt_prefix = '  ',
-        selection_caret = "* ",
-
-        -- file_previewer = require('telescope.previewers').vim_buffer_cat.new,
-        -- grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new,
-        -- qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
+        selection_caret = " ",
 
         mappings = {
             n = {
-                ['jk'] = actions.close,
+                -- ['jk'] = actions.close,
                 ['N'] = fb_actions.create,
                 ['M'] = fb_actions.move,
                 ['D'] = fb_actions.remove,
@@ -21,7 +17,8 @@ telescope.setup({
                 ['-'] = fb_actions.goto_parent_dir,
             },
             i = {
-                ['jk'] = actions.close
+                ['<C-j>'] = actions.move_selection_next,
+                ['<C-k>'] = actions.move_selection_previous
             }
         },
 
