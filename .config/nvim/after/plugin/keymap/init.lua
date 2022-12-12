@@ -25,6 +25,8 @@ nnoremap('<leader>h', ':split<CR>', remap.opts)
 nnoremap('<leader>+', ':vertical resize +5<CR>', remap.opts)
 nnoremap('<leader>-', ':vertical resize -5<CR>', remap.opts)
 
+nnoremap('<C-s>', ':set scrollbind!  scrollbind?<CR>', remap.opts)
+
 nnoremap('<C-d>', '<C-d>zz', remap.opts)
 nnoremap('<C-u>', '<C-u>zz', remap.opts)
 nnoremap('n', 'nzzzv')
