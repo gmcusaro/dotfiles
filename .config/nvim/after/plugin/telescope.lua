@@ -9,7 +9,7 @@ telescope.setup({
 
         mappings = {
             n = {
-                -- ['jk'] = actions.close,
+                ['q'] = actions.close,
                 ['N'] = fb_actions.create,
                 ['M'] = fb_actions.move,
                 ['D'] = fb_actions.remove,
