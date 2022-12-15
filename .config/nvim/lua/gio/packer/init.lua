@@ -22,6 +22,7 @@ require('packer').startup(function(use)
         'sindrets/diffview.nvim'
     } }
     use { 'lewis6991/gitsigns.nvim' }
+    use { 'jiaoshijie/undotree' }
 
     use { 'kyazdani42/nvim-web-devicons' }
     use { 'nvim-lualine/lualine.nvim' }
