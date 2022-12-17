@@ -18,11 +18,10 @@ require('packer').startup(function(use)
 
     use { 'catppuccin/nvim', as = 'catppuccin' }
 
-    use { 'TimUntersberger/neogit', requires = {
-        'sindrets/diffview.nvim'
-    } }
+    use { 'TimUntersberger/neogit' }
     use { 'lewis6991/gitsigns.nvim' }
     use { 'jiaoshijie/undotree' }
+    use { 'sindrets/diffview.nvim' }
 
     use { 'kyazdani42/nvim-web-devicons' }
     use { 'nvim-lualine/lualine.nvim' }
@@ -40,11 +39,7 @@ require('packer').startup(function(use)
     use 'L3MON4D3/LuaSnip'
 
     use 'ur4ltz/surround.nvim'
-    use { 'numToStr/Comment.nvim',
-        config = function()
-            require('Comment').setup()
-        end
-    }
+    use 'numToStr/Comment.nvim'
     use 'windwp/nvim-ts-autotag'
     use 'windwp/nvim-autopairs'
     use { 'jdhao/better-escape.vim', event = { 'InsertEnter' } }
