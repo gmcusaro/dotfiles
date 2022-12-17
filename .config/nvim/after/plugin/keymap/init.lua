@@ -39,3 +39,6 @@ nnoremap('<S-TAB>', ':bprevious<CR>', remap.opts)
 -- Buffer delete
 nnoremap('<leader>b', ':Bdelete menu<CR>', remap.opts)
 nnoremap('<leader>t', ':Bdelete this<CR>', remap.opts)
+
+-- Diffview
+nnoremap('<leader>vv', ':DiffviewOpen<CR>', remap.opts)
