@@ -6,8 +6,10 @@ local vnoremap = remap.vnoremap
 -- local xnoremap = Remap.xnoremap
 -- local nmap     = Remap.nmap
 
+nnoremap('q:', '<nop>', remap.opts)
+
 nnoremap('x', '"_x') -- Do not yank with x
-nnoremap('<CR>', ':noh<CR>', remap.opts)  -- Clear highlight result
+nnoremap('<CR>', ':noh<CR>', remap.opts) -- Clear highlight result
 nnoremap('<leader>a', 'gg<S-v>G') -- Select all
 
 vnoremap('<BS>', '\"_d') -- Backspace delete visual mode
@@ -26,14 +28,11 @@ nnoremap('<leader>+', ':vertical resize +5<CR>', remap.opts)
 nnoremap('<leader>-', ':vertical resize -5<CR>', remap.opts)
 
 nnoremap('<C-s>', ':set scrollbind!  scrollbind?<CR>', remap.opts)
-
-nnoremap('<C-d>', '<C-d>zz', remap.opts)
-nnoremap('<C-u>', '<C-u>zz', remap.opts)
-nnoremap('n', 'nzzzv')
-nnoremap('N', 'Nzzzv')
+-- nnoremap('<C-d>', '<C-d>zz', remap.opts)
+-- nnoremap('<C-u>', '<C-u>zz', remap.opts)
 
 -- Tab navigation
-nnoremap('<TAB>',   ':bnext<CR>', remap.opts)
+nnoremap('<TAB>', ':bnext<CR>', remap.opts)
 nnoremap('<S-TAB>', ':bprevious<CR>', remap.opts)
 
 -- Buffer delete
@@ -41,4 +40,5 @@ nnoremap('<leader>b', ':Bdelete menu<CR>', remap.opts)
 nnoremap('<leader>t', ':Bdelete this<CR>', remap.opts)
 
 -- Diffview
-nnoremap('<leader>vv', ':DiffviewOpen<CR>', remap.opts)
+nnoremap('<leader>do', ':DiffviewOpen<CR>', remap.opts)
+nnoremap('<leader>dc', ':DiffviewClose<CR>', remap.opts)
