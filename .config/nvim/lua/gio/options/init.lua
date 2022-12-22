@@ -1,7 +1,6 @@
 local opt = vim.opt -- Floating window popup menu
 local g   = vim.g   -- Global variables
 local wo  = vim.wo  -- Window scoped
-local cmd = vim.cmd -- Command
 
 g.mapleader = " "
 
@@ -79,6 +78,7 @@ opt.shortmess = opt.shortmess
 		+ 'A' -- remove swap file messages
 		+ 'W' -- don't echo "[w]"/"[written]" when writing
 
+-- vim.opt.formatoptions:remove("o")
 
 --opt.formatoptions = opt.formatoptions
 --  - 'o'  -- Don't continue comments with o and O
@@ -92,6 +92,7 @@ opt.shortmess = opt.shortmess
 --  - '2'    -- I am a programmer and not a writer --
 --	+ 'l'    -- break long lines in insert mode
 --	+ 't'    -- auto-wrap text using textwidth
+
 
 --opt.formatoptions = vim.opt.formatoptions
 --    + 't'
