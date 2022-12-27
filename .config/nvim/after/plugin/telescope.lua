@@ -1,6 +1,7 @@
 local telescope = require('telescope')
-local actions = require('telescope.actions')
 local fb_actions = require('telescope').extensions.file_browser.actions
+local actions = require('telescope.actions')
+local builtin = require('telescope.builtin')
 
 telescope.setup({
     defaults = {
@@ -62,19 +63,17 @@ function Live_grep_selection()
     local current_selection = require('gio.utils').current_selection
     local opts = {
         prompt_title = "~ Live grep ~",
-        previewer = false,
         default_text = current_selection()
     }
-    require("telescope.builtin").live_grep(opts)
+    builtin.live_grep(opts)
 end
 
 function Live_grep()
     local opts = {
         prompt_title = "~ Live grep ~",
-        previewer = false,
-        default_text = ""
+        search = vim.fn.input("Grep > ")
     }
-    require("telescope.builtin").live_grep(opts)
+    builtin.grep_string(opts)
 end
 
 function Find_files()
@@ -83,7 +82,15 @@ function Find_files()
         previewer = false,
         hidden = true
     }
-    require("telescope.builtin").find_files(opts)
+    builtin.find_files(opts)
+end
+
+function Git_files()
+    local opts = {
+        prompt_title = "~ Gits ~",
+        previewer = false
+    }
+    builtin.git_files(opts)
 end
 
 local keymaps = require("gio.keymaps")
@@ -96,3 +103,4 @@ nnoremap('<leader>fb', '<cmd> lua File_browser()<CR>', keymaps.opts)
 nnoremap('<leader>fg', '<cmd> lua Live_grep()<CR>', keymaps.opts)
 vnoremap('<leader>fg', '<cmd> lua Live_grep_selection()<CR>', keymaps.opts)
 nnoremap('<leader>ff', '<cmd> lua Find_files()<CR>', keymaps.opts)
+nnoremap('<leader>gf', '<cmd> lua Git_files()<CR>', keymaps.opts)
