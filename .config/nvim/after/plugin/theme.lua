@@ -4,7 +4,8 @@ require('catppuccin').setup({
         mocha = {
             green = '#A2CEB4',
             base = '#181824',
-            mantle = '#11111b'
+            mantle = '#11111b',
+            flamingo = '#45475A'
         }
     }
 })
