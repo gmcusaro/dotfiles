@@ -6,10 +6,9 @@ local vnoremap = remap.vnoremap
 -- local xnoremap = Remap.xnoremap
 -- local nmap     = Remap.nmap
 
-nnoremap('q:', '<nop>', remap.opts)
-
 nnoremap('x', '"_x') -- Do not yank with x
 nnoremap('<CR>', ':noh<CR>', remap.opts) -- Clear highlight result
+
 nnoremap('<leader>a', 'gg<S-v>G') -- Select all
 
 vnoremap('<BS>', '\"_d') -- Backspace delete visual mode
