@@ -52,7 +52,7 @@ alias app="brew cu -a"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-alias vim="nvim"
+alias v="nvim"
 
 # Dotfiles bare repo
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
