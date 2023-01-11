@@ -60,10 +60,10 @@ function File_browser()
 end
 
 function Live_grep_selection()
-    local current_selection = require('gio.utils').current_selection
+    local utils = require('gio.utils')
     local opts = {
         prompt_title = "~ Live grep ~",
-        default_text = current_selection()
+        default_text = utils.current_selection()
     }
     builtin.live_grep(opts)
 end
@@ -97,7 +97,6 @@ local keymaps = require("gio.keymaps")
 local nnoremap = keymaps.nnoremap
 local vnoremap = keymaps.vnoremap
 
-nnoremap("<leader>f", ":Telescope<CR>", keymaps.opts)
 nnoremap('<leader>fo', '<cmd> lua Old_files()<CR>', keymaps.opts)
 nnoremap('<leader>fb', '<cmd> lua File_browser()<CR>', keymaps.opts)
 nnoremap('<leader>fg', '<cmd> lua Live_grep()<CR>', keymaps.opts)

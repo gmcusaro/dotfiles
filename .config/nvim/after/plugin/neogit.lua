@@ -1,9 +1,6 @@
 local neogit = require('neogit')
 
 neogit.setup {
-    -- popup = {
-    --     kind = "split_above",
-    -- },
     commit_popup = {
         kind = "split_above"
     },
