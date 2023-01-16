@@ -53,6 +53,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias v="nvim"
+alias vim="nvim"
 
 # Dotfiles bare repo
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
