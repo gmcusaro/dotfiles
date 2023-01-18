@@ -7,7 +7,10 @@ local vnoremap = remap.vnoremap
 -- local nmap     = Remap.nmap
 
 nnoremap('x', '"_x') -- Do not yank with x
-nnoremap('<CR>', ':noh<CR>', remap.opts) -- Clear highlight result
+
+-- Clear highlight search
+nnoremap("<CR>", ":nohlsearch<CR>", remap.opts)
+vnoremap("<CR>", ":nohlsearch<CR>", remap.opts)-- <leader>nh
 
 nnoremap('<leader>a', 'gg<S-v>G') -- Select all
 
