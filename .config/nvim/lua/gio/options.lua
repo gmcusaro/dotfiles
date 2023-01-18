@@ -13,6 +13,7 @@ opt.pumblend = 15
 opt.wildmode = 'longest,full'
 opt.wildoptions = 'pum'
 opt.showmode = false
+opt.signcolumn = 'yes'
 
 -- Disable backup and swap files
 g.backup = false
