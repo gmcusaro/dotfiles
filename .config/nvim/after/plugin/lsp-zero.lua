@@ -1,12 +1,13 @@
-vim.opt.signcolumn = 'yes'
-
 local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 -- Install these servers
 lsp.ensure_installed({
     'sumneko_lua',
-    'marksman'
+    'marksman',
+    'html',
+    'cssls',
+    'yamlls'
 })
 
 lsp.set_preferences({
