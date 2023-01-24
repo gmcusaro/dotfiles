@@ -1,4 +1,9 @@
 require('surround').setup {
     prompt = false,
-    brackets = {"(", "[", "{"}
+    pairs = {
+        linear = {
+            c = { "*", "*" },
+            g = { "**", "**" }
+        }
+    }
 }
