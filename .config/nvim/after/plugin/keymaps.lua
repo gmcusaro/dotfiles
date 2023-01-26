@@ -2,10 +2,11 @@ local remap = require('gio.keymaps')
 
 local nnoremap = remap.nnoremap
 local vnoremap = remap.vnoremap
--- local inoremap = Remap.inoremap
--- local xnoremap = Remap.xnoremap
--- local nmap     = Remap.nmap
+-- local inoremap = remap.inoremap
+local xnoremap = remap.xnoremap
+-- local nmap     = remap.nmap
 
+xnoremap('jk', '<ESC>')
 nnoremap('x', '"_x') -- Do not yank with x
 
 -- Clear highlight search
