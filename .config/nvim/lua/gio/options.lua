@@ -2,7 +2,8 @@ local opt = vim.opt -- Floating window popup menu
 local g   = vim.g   -- Global variables
 local wo  = vim.wo  -- Window scoped
 
-g.mapleader = " "
+g.mapleader = ' '
+g.maplocalleader = ' '
 
 opt.mouse = 'nv'
 opt.clipboard = 'unnamedplus' -- Add the system clipboard to nvim
