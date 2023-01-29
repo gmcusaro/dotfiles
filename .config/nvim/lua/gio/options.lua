@@ -6,9 +6,10 @@ g.mapleader = ' '
 g.maplocalleader = ' '
 
 opt.mouse = 'nv'
-opt.clipboard = 'unnamedplus' -- Add the system clipboard to nvim
+opt.clipboard = 'unnamedplus'
 
 opt.termguicolors = true
+opt.errorbells = true
 
 opt.pumblend = 15
 opt.wildmode = 'longest,full'
@@ -16,22 +17,19 @@ opt.wildoptions = 'pum'
 opt.showmode = false
 opt.signcolumn = 'yes'
 
--- Disable backup and swap files
 g.backup = false
 g.writebackup = false
 g.swapfile = false
 
 opt.scrolloff = 8
 opt.sidescrolloff = 5
-
-opt.errorbells = true
+opt.numberwidth = 4
 
 opt.number = true
 opt.relativenumber = true
-opt.numberwidth = 5     -- valutare per distanziare i numeri dai simboli git
 
 opt.cursorline = true
-
+opt.laststatus = 3 -- use one statusline for many buffers
 opt.cmdheight = 2
 opt.whichwrap = 'b,s,<,>,[,],h,l'
 opt.conceallevel = 0
@@ -44,7 +42,6 @@ opt.expandtab = true
 
 opt.smartindent = true
 opt.smartcase = true
-
 
 -- Search
 opt.hlsearch = true
@@ -63,15 +60,11 @@ opt.timeout = false
 opt.timeoutlen = 100
 opt.updatetime = 750 -- Stop longer updatetime
 
-opt.confirm = true
-
 wo.signcolumn = 'yes'
-
 -- wo.colorcolumn = "80" -- da inserire come autocomand regex
 
 opt.updatetime = 1500 -- ms of inactivity it takes to update swap
-
-opt.laststatus = 3 -- use one statusline for many buffers
+opt.confirm = true
 
 opt.shortmess = opt.shortmess
 		+ 'I' -- remove intro screen
@@ -95,7 +88,6 @@ opt.shortmess = opt.shortmess
 --	+ 'l'    -- break long lines in insert mode
 --	+ 't'    -- auto-wrap text using textwidth
 
-
 --opt.formatoptions = vim.opt.formatoptions
 --    + 't'
 --    + '2'
@@ -108,4 +100,3 @@ opt.shortmess = opt.shortmess
 --opt.formatoptions = vim.opt.formatoptions - 'o'
 --opt.formatoptions = vim.opt.formatoptions:remove('r')
 --opt.formatoptions = string.gsub(vim.o.formatoptions, '[o]', '')
---comment test
