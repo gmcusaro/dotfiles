@@ -2,18 +2,21 @@ local remap = require('gio.keymaps')
 
 local nnoremap = remap.nnoremap
 local vnoremap = remap.vnoremap
--- local inoremap = remap.inoremap
-local xnoremap = remap.xnoremap
--- local nmap     = remap.nmap
+local inoremap = remap.inoremap
+-- local xnoremap = remap.xnoremap
 
-xnoremap('jk', '<ESC>')
 nnoremap('x', '"_x') -- Do not yank with x
 
 -- Clear highlight search
 nnoremap("<CR>", ":nohlsearch<CR>", remap.opts)
-vnoremap("<CR>", ":nohlsearch<CR>", remap.opts)-- <leader>nh
+vnoremap("<CR>", ":nohlsearch<CR>", remap.opts)
 
 nnoremap('<leader>a', 'gg<S-v>G') -- Select all
+
+vim.keymap.set("v", "<leader>a", function()
+    vim.api.nvim_input "<Esc>"
+    -- require("telescope").extensions.refactoring.refactors()
+end)
 
 vnoremap('<BS>', '\"_d') -- Backspace delete visual mode
 vnoremap('K', ":m '<-2<CR>gv=gv", remap.opts) -- Move UP
