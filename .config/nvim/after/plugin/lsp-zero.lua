@@ -7,7 +7,8 @@ lsp.ensure_installed({
     'marksman',
     'html',
     'cssls',
-    'yamlls'
+    'yamlls',
+    'jsonls'
 })
 
 lsp.set_preferences({
