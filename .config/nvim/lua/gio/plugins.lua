@@ -27,7 +27,7 @@ require('lazy').setup({
     { 'nvim-telescope/telescope.nvim' },
     { 'nvim-telescope/telescope-file-browser.nvim' },
     { 'nvim-telescope/telescope-live-grep-args.nvim' },
-
+    { "ThePrimeagen/refactoring.nvim" },
 
     'ur4ltz/surround.nvim',
     'numToStr/Comment.nvim',
@@ -36,8 +36,7 @@ require('lazy').setup({
     'Asheq/close-buffers.vim',
     { 'jdhao/better-escape.vim', event = { 'InsertEnter' } },
 
-    {
-        'VonHeikemen/lsp-zero.nvim',
+    {   'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
         dependencies = {
             -- LSP Support
