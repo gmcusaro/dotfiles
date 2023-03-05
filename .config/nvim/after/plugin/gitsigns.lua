@@ -9,8 +9,8 @@ require('gitsigns').setup({
     },
 })
 
-local keymap = require("gio.keymaps")
-local nnoremap = keymap.nnoremap
-local signs = package.loaded.gitsigns
 
-nnoremap('<leader>gi', signs.toggle_current_line_blame, keymap.opts)
+local signs = package.loaded.gitsigns
+local opts = { silent = true, noremap = true }
+
+vim.keymap.set("n", "<leader>gi", signs.toggle_current_line_blame, opts)

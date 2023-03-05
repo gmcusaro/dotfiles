@@ -10,9 +10,6 @@ neogit.setup {
     disable_commit_confirmation = true,
 }
 
-local keymap = require('gio.keymaps')
-local nnoremap = keymap.nnoremap
-
 local function opencommit()
     neogit.open({ 'commit' })
 end
@@ -21,6 +18,13 @@ local function opensplit()
     neogit.open({ kind = "split_above" })
 end
 
-nnoremap('<leader>gc', opencommit, keymap.opts)
-nnoremap('<leader>gs', opensplit, keymap.opts)
-nnoremap("<leader>gf", "<cmd>!git fetch --all<cr>", keymap.opts)
+local opts = { silent = true, noremap = true }
+
+vim.keymap.set("n", "<leader>gc", opencommit, opts)
+-- nnoremap('<leader>gc', opencommit, keymap.opts)
+
+vim.keymap.set("n", "<leader>gs", opensplit, opts)
+-- nnoremap('<leader>gs', opensplit, keymap.opts)
+
+vim.keymap.set("n", "<leader>gf", "<cmd>!git fetch --all<CR>", opts)
+-- nnoremap("<leader>gf", "<cmd>!git fetch --all<cr>", keymap.opts)

@@ -4,7 +4,5 @@ undotree.setup({
     float_diff = false
 })
 
-local keymaps = require("gio.keymaps")
-local nnoremap = keymaps.nnoremap
-
-nnoremap('<leader>u', undotree.toggle, keymaps.opts)
+local opts = { silent = true, noremap = true }
+vim.keymap.set("n", "<leader>u", undotree.toggle, opts)

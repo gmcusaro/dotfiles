@@ -93,13 +93,13 @@ function Git_files()
     builtin.git_files(opts)
 end
 
-local keymaps = require("gio.keymaps")
-local nnoremap = keymaps.nnoremap
-local vnoremap = keymaps.vnoremap
+local opts = { silent = true, noremap = true }
 
-nnoremap('<leader>fo', '<cmd> lua Old_files()<CR>', keymaps.opts)
-nnoremap('<leader>fb', '<cmd> lua File_browser()<CR>', keymaps.opts)
-nnoremap('<leader>fg', '<cmd> lua Live_grep()<CR>', keymaps.opts)
-vnoremap('<leader>fg', '<cmd> lua Live_grep_selection()<CR>', keymaps.opts)
-nnoremap('<leader>ff', '<cmd> lua Find_files()<CR>', keymaps.opts)
-nnoremap('<leader>gf', '<cmd> lua Git_files()<CR>', keymaps.opts)
+vim.keymap.set("n", "<leader>ff", Find_files, opts)
+vim.keymap.set("n", "<leader>fo", Old_files, opts)
+vim.keymap.set("n", "<leader>fb", File_browser, opts)
+
+vim.keymap.set("n", "<leader>fg", Live_grep, opts)
+vim.keymap.set("v", "<leader>fg", Live_grep_selection, opts)
+
+vim.keymap.set("n", "<leader>gf", Git_files, opts)
