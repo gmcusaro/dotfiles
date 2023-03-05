@@ -13,6 +13,10 @@ export VISUAL="$EDITOR"
 # User configuration
 export PATH="/usr/local/sbin:$PATH"
 
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
 # ssh
 export SSH_KEY_PATH="~/.ssh/giohub"
 
@@ -21,23 +25,27 @@ ZSH_DISABLE_COMPFIX="true"
 KEYTIMEOUT=0
 
 # my personal list
-plugins=(git macos ruby yarn zsh-autosuggestions zsh-syntax-highlighting emoji brew)
-
-source $ZSH/oh-my-zsh.sh
+plugins=(git
+    macos
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    brew)
 
 # Custom highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
+source $ZSH/oh-my-zsh.sh
+
 # This speeds up pasting w/ autosuggest - https://github.com/zsh-users/zsh-autosuggestions/issues/238
-pasteinit() {
-  OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
-  zle -N self-insert url-quote-magic
-}
-pastefinish() {
-  zle -N self-insert $OLD_SELF_INSERT
-}
-zstyle :bracketed-paste-magic paste-init pasteinit
-zstyle :bracketed-paste-magic paste-finish pastefinish
+# pasteinit() {
+#   OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
+#   zle -N self-insert url-quote-magic
+# }
+# pastefinish() {
+#   zle -N self-insert $OLD_SELF_INSERT
+# }
+# zstyle :bracketed-paste-magic paste-init pasteinit
+# zstyle :bracketed-paste-magic paste-finish pastefinish
 
 # Init StarShip
 eval "$(starship init zsh)"
