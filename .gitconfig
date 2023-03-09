@@ -2,9 +2,6 @@
 	email = gcusaro@me.com
 	name = Giovanni Maria Cusaro
 [alias]
-    ga  = git add
-    gst = git status
-    gp  = git push
     cm  = commit -m
 [core]
     editor = neovim
