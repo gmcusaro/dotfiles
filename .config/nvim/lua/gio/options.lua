@@ -72,31 +72,8 @@ opt.shortmess = opt.shortmess
 		+ 'O' -- file-read message overwrites previous
 		+ 'A' -- remove swap file messages
 		+ 'W' -- don't echo "[w]"/"[written]" when writing
+        - 'o' -- Don't continue comments with o and O
 
--- vim.opt.formatoptions:remove("o")
+-- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
---opt.formatoptions = opt.formatoptions
---  - 'o'  -- Don't continue comments with o and O
---  + 'j'  -- delete comment character when joining commented lines
---  + 'c'  -- Respect textwidth in comments
---  + 't'  -- auto-wrap text using textwidth
---  + 'r'    -- auto insert comment leader on pressing enter --
---  + 'q'    -- format comments with gq --
---  - 'a'    -- don't autoformat the paragraphs (use some formatter instead) --
---  + 'n'    -- autoformat numbered list --
---  - '2'    -- I am a programmer and not a writer --
---	+ 'l'    -- break long lines in insert mode
---	+ 't'    -- auto-wrap text using textwidth
 
---opt.formatoptions = vim.opt.formatoptions
---    + 't'
---    + '2'
---    - 'a'
---    + 'n'
---    - 'q'
---    - 'o'
---    - 'r'
-
---opt.formatoptions = vim.opt.formatoptions - 'o'
---opt.formatoptions = vim.opt.formatoptions:remove('r')
---opt.formatoptions = string.gsub(vim.o.formatoptions, '[o]', '')
