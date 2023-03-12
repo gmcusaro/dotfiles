@@ -64,9 +64,9 @@ opt.confirm = true
 wo.signcolumn = 'yes'
 
 opt.shortmess = opt.shortmess
-		+ 'I' -- remove intro screen
-		+ 'a' -- use abbraviations
-		+ 'O' -- file-read message overwrites previous
-		+ 'A' -- remove swap file messages
-		+ 'W' -- don't echo "[w]"/"[written]" when writing
-        - 'o' -- Don't continue comments with o and O
+	+ 'I' -- remove intro screen
+	+ 'a' -- use abbraviations
+	+ 'O' -- file-read message overwrites previous
+	+ 'A' -- remove swap file messages
+	+ 'W' -- don't echo "[w]"/"[written]" when writing
+	- 'o' -- Don't continue comments with o and O
