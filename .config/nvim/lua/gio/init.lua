@@ -1,4 +1,4 @@
-require("gio.options")
+
 require("gio.plugins")
 
 local autocmd = vim.api.nvim_create_autocmd
@@ -36,4 +36,11 @@ autocmd('TextYankPost', {
             timeout = 40,
         })
     end,
+})
+
+autocmd({'BufRead'}, {
+    pattern = "*",
+    callback = function ()
+       vim.fn.matchadd('ColorColumn', '\\%81v\\s*\\zs\\S', 100)
+    end
 })

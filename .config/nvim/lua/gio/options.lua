@@ -59,12 +59,9 @@ opt.equalalways = false
 opt.timeout = false
 opt.timeoutlen = 100
 opt.updatetime = 750 -- Stop longer updatetime
+opt.confirm = true
 
 wo.signcolumn = 'yes'
--- wo.colorcolumn = "80" -- da inserire come autocomand regex
-
-opt.updatetime = 1500 -- ms of inactivity it takes to update swap
-opt.confirm = true
 
 opt.shortmess = opt.shortmess
 		+ 'I' -- remove intro screen
@@ -73,7 +70,3 @@ opt.shortmess = opt.shortmess
 		+ 'A' -- remove swap file messages
 		+ 'W' -- don't echo "[w]"/"[written]" when writing
         - 'o' -- Don't continue comments with o and O
-
--- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-
-
