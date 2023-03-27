@@ -7,7 +7,6 @@ telescope.setup({
     defaults = {
         prompt_prefix = '  ',
         selection_caret = "| ",
-
         mappings = {
             n = {
                 ['q'] = actions.close,
@@ -22,11 +21,9 @@ telescope.setup({
                 ['<C-k>'] = actions.move_selection_previous
             }
         },
-
         layout_config = {
             prompt_position = 'top',
         },
-
         sorting_strategy = 'ascending',
         extensions = {
             file_browser = {
