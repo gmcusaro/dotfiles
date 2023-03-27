@@ -4,6 +4,10 @@ local wo  = vim.wo  -- Window scoped
 
 g.mapleader = ' '
 g.maplocalleader = ' '
+g.backup = false
+g.writebackup = false
+g.swapfile = false
+g.netrw_browse_split = 0
 
 opt.mouse = 'nv'
 opt.clipboard = 'unnamedplus'
@@ -16,15 +20,11 @@ opt.wildmode = 'longest,full'
 opt.wildoptions = 'pum'
 opt.showmode = false
 opt.signcolumn = 'yes'
-
-g.backup = false
-g.writebackup = false
-g.swapfile = false
+opt.fillchars = { eob = " " }
 
 opt.scrolloff = 8
 opt.sidescrolloff = 5
 opt.numberwidth = 4
-
 opt.number = true
 opt.relativenumber = true
 
@@ -58,8 +58,9 @@ opt.equalalways = false
 -- Eliminate delays
 opt.timeout = false
 opt.timeoutlen = 100
-opt.updatetime = 750 -- Stop longer updatetime
+opt.updatetime = 300 -- Stop longer updatetime
 
+g.autopairs_enabled = true
 wo.signcolumn = 'yes'
 opt.confirm = true
 
