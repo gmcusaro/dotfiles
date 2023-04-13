@@ -21,7 +21,11 @@ require('lazy').setup({
     { "sindrets/diffview.nvim" },
     { "jiaoshijie/undotree" },
 
-    { "nvim-lualine/lualine.nvim" },
+    { "nvim-lualine/lualine.nvim",
+        dependencies = {
+            "meuter/lualine-so-fancy.nvim"
+        }
+    },
 
     { "nvim-treesitter/nvim-treesitter", build = { ":TSUpdate" } },
     { "nvim-telescope/telescope.nvim" },
@@ -29,11 +33,12 @@ require('lazy').setup({
     { "nvim-telescope/telescope-live-grep-args.nvim" },
     { "ThePrimeagen/refactoring.nvim" },
 
-    "ur4ltz/surround.nvim",
-    "numToStr/Comment.nvim",
-    "windwp/nvim-ts-autotag",
-    "windwp/nvim-autopairs",
-    "Asheq/close-buffers.vim",
+    { "ur4ltz/surround.nvim" },
+    { "numToStr/Comment.nvim" },
+    { "windwp/nvim-ts-autotag" },
+    { "windwp/nvim-autopairs" },
+    { "Asheq/close-buffers.vim" },
+
     { "jdhao/better-escape.vim", event = { "InsertEnter" } },
 
     {   "VonHeikemen/lsp-zero.nvim",
