@@ -8,6 +8,7 @@ g.backup = false
 g.writebackup = false
 g.swapfile = false
 g.netrw_browse_split = 0
+-- g.editorconfig = true
 
 opt.mouse = 'nv'
 opt.clipboard = 'unnamedplus'
@@ -27,6 +28,7 @@ opt.sidescrolloff = 5
 opt.numberwidth = 4
 opt.number = true
 opt.relativenumber = true
+-- opt.statuscolumn = "%l %r"
 
 opt.cursorline = true
 opt.laststatus = 3 -- use one statusline for many buffers
