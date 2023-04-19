@@ -23,7 +23,7 @@ require('lazy').setup({
 
     { "nvim-lualine/lualine.nvim",
         dependencies = {
-            "meuter/lualine-so-fancy.nvim"
+            "meuter/lualine-so-fancy.nvim",
         }
     },
 
