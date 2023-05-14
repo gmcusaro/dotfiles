@@ -31,36 +31,33 @@ opt.relativenumber = true
 -- opt.statuscolumn = "%l %r"
 
 opt.cursorline = true
-opt.laststatus = 3 -- use one statusline for many buffers
+opt.laststatus = 3
 opt.cmdheight = 2
 opt.whichwrap = 'b,s,<,>,[,],h,l'
 opt.conceallevel = 0
 opt.linebreak = true
 
+opt.expandtab = true
 opt.tabstop = 4
 opt.softtabstop = 4
 opt.shiftwidth = 4
-opt.expandtab = true
-
+opt.smarttab = true
 opt.smartindent = true
 opt.smartcase = true
 
--- Search
 opt.hlsearch = true
 opt.incsearch = true
 opt.ignorecase = true
 g.showmatch = true
 
 opt.conceallevel = 0
-
 opt.splitbelow = true
 opt.splitright = true
 opt.equalalways = false
 
--- Eliminate delays
 opt.timeout = false
 opt.timeoutlen = 100
-opt.updatetime = 300 -- Stop longer updatetime
+opt.updatetime = 300
 
 g.autopairs_enabled = true
 wo.signcolumn = 'yes'
