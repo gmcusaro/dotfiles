@@ -8,6 +8,9 @@ vim.keymap.set("v", "<BS>", '\"_d', silent) -- Backspace delete visual mode
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", silent)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", silent)
 
+vim.keymap.set("v", "<TAB>", ">gv")
+vim.keymap.set("v", "<S-TAB>", "<gv")
+
 -- Navigation - Split - Resize
 vim.keymap.set("n", "sh", "<C-w>h", silent)
 vim.keymap.set("n", "sj", "<C-w>j", silent)
@@ -32,6 +35,10 @@ vim.keymap.set("n", "<leader>t", ":Bdelete this<CR>", silent)
 vim.keymap.set("n", "<leader>do", "DiffviewOpen<CR>", silent)
 vim.keymap.set("n", "<leader>dc", "DiffviewClose<CR>", silent)
 
+-- ZenMode
+vim.keymap.set("n", "<leader>z", ":ZenMode<CR>", silent)
 -- vim.keymap.set("v", "<leader>dd", function ()
 --     require("telescope").extensions.refactoring.refactors()
 -- end, silent)
+
+-- vadi altri https://medium.com/linux-with-michael/must-have-neovim-keymaps-51c283394070
