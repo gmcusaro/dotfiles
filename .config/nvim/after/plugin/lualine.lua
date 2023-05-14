@@ -1,12 +1,6 @@
 local lualine = require('lualine')
 
-local colors = {
-  fg       = '#bbc2cf',
-  green    = '#98be65',
-  orange   = '#FF8800',
-  violet   = '#a9a1e1',
-  red      = '#ec5f67',
-}
+local mocha = require("catppuccin.palettes").get_palette "mocha"
 
 local conditions = {
     buffer_not_empty = function()
@@ -16,12 +10,6 @@ local conditions = {
     hide_in_width = function()
         return vim.fn.winwidth(0) > 80
     end,
-
-    -- check_git_workspace = function()
-    --     local filepath = vim.fn.expand('%:p:h')
-    --     local gitdir = vim.fn.finddir('.git', filepath .. ';')
-    --     return gitdir and #gitdir > 0 and #gitdir < #filepath
-    -- end,
 }
 
 -- Config
@@ -61,16 +49,16 @@ end
 
 ins_left {
     "branch",
-    color = { fg = colors.violet, gui = 'bold' },
+    color = { fg = mocha.mauve, gui = 'bold' },
 }
 
 ins_left {
     "diff",
-    symbols = { added = ' ', modified = '柳', removed = ' ' },
+    symbols = { added = ' ', modified = '󱓼 ', removed = ' ' },
     diff_color = {
-        added = { fg = colors.green },
-        modified = { fg = colors.yellow },
-        removed = { fg = colors.red },
+        added = { fg = mocha.green },
+        modified = { fg = mocha.yellow },
+        removed = { fg = mocha.red },
     },
 }
 
@@ -91,6 +79,10 @@ ins_left {
     'filesize',
     cond = conditions.buffer_not_empty,
 }
+
+-- ins_right {
+--     "fileformat", icons_enabled = true,
+-- }
 
 -- ins_left {
 --     "filetype", icons_enabled = true
@@ -121,9 +113,9 @@ ins_right {
     sources = { "nvim_diagnostic" },
     symbols = { error = " ", warn = " ", info = " " },
     diagnostics_color = {
-        color_error = { fg = colors.red },
-        color_warn = { fg = colors.yellow },
-        color_info = { fg = colors.cyan },
+        color_error = { fg = mocha.red },
+        color_warn = { fg = mocha.yellow },
+        color_info = { fg = mocha.sky},
     },
 }
 
@@ -134,14 +126,8 @@ ins_right {
 }
 
 ins_right {
-    -- 'fancy_location',
-    '%l:%c', '%p%%/%L'
+    '%l:%c', '%p%%/%L' -- 'fancy_location'
 }
-
--- ins_right {
---     "fileformat",
---     icons_enabled = true,
--- }
 
 ins_right {
     'progress'
