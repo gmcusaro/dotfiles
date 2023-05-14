@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    { "nvim-lua/plenary.nvim" }, -- Common Utilities
+    { "nvim-lua/plenary.nvim" },
 
     { "catppuccin/nvim", name = "catppuccin" },
 
@@ -31,13 +31,21 @@ require('lazy').setup({
     { "nvim-telescope/telescope.nvim" },
     { "nvim-telescope/telescope-file-browser.nvim" },
     { "nvim-telescope/telescope-live-grep-args.nvim" },
-    { "ThePrimeagen/refactoring.nvim" },
 
-    { "ur4ltz/surround.nvim" },
+    { "kylechui/nvim-surround",
+        version = "*",
+        event = "VeryLazy",
+        config = function()
+            require("nvim-surround").setup({})
+        end
+    },
     { "numToStr/Comment.nvim" },
+    { "Wansmer/treesj" },
+    { "folke/zen-mode.nvim" },
     { "windwp/nvim-ts-autotag" },
     { "windwp/nvim-autopairs" },
     { "Asheq/close-buffers.vim" },
+    -- { "ThePrimeagen/refactoring.nvim" },
 
     { "jdhao/better-escape.vim", event = { "InsertEnter" } },
 
