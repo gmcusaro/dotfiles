@@ -33,7 +33,6 @@ opt.relativenumber = true
 opt.cursorline = true
 opt.laststatus = 3
 opt.cmdheight = 2
-opt.whichwrap = 'b,s,<,>,[,],h,l'
 opt.conceallevel = 0
 opt.linebreak = true
 
@@ -50,13 +49,12 @@ opt.incsearch = true
 opt.ignorecase = true
 g.showmatch = true
 
-opt.conceallevel = 0
+opt.conceallevel = 2
 opt.splitbelow = true
 opt.splitright = true
 opt.equalalways = false
 
-opt.timeout = false
-opt.timeoutlen = 100
+opt.timeoutlen = 300
 opt.updatetime = 300
 
 g.autopairs_enabled = true
@@ -64,9 +62,9 @@ wo.signcolumn = 'yes'
 opt.confirm = true
 
 opt.shortmess = opt.shortmess
-		+ 'I' -- remove intro screen
-		+ 'a' -- use abbraviations
-		+ 'O' -- file-read message overwrites previous
-		+ 'A' -- remove swap file messages
-		+ 'W' -- don't echo "[w]"/"[written]" when writing
-        - 'o' -- Don't continue comments with o and O
+    + 'I' -- remove intro screen
+    + 'a' -- use abbraviations
+    + 'O' -- file-read message overwrites previous
+    + 'A' -- remove swap file messages
+    + 'W' -- don't echo "[w]"/"[written]" when writing
+    - 'o' -- Don't continue comments with o and O
