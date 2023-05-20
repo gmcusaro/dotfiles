@@ -8,7 +8,6 @@ g.backup = false
 g.writebackup = false
 g.swapfile = false
 g.netrw_browse_split = 0
--- g.editorconfig = true
 
 opt.mouse = 'nv'
 opt.clipboard = 'unnamedplus'
@@ -21,14 +20,12 @@ opt.wildmode = 'longest,full'
 opt.wildoptions = 'pum'
 opt.showmode = false
 opt.signcolumn = 'yes'
-opt.fillchars = { eob = " " }
 
 opt.scrolloff = 8
-opt.sidescrolloff = 5
+opt.sidescrolloff = 8
 opt.numberwidth = 4
 opt.number = true
 opt.relativenumber = true
--- opt.statuscolumn = "%l %r"
 
 opt.cursorline = true
 opt.laststatus = 3
@@ -49,7 +46,7 @@ opt.incsearch = true
 opt.ignorecase = true
 g.showmatch = true
 
-opt.conceallevel = 2
+opt.conceallevel = 0
 opt.splitbelow = true
 opt.splitright = true
 opt.equalalways = false
