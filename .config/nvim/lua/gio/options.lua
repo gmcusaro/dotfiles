@@ -51,7 +51,7 @@ opt.splitbelow = true
 opt.splitright = true
 opt.equalalways = false
 
-opt.timeoutlen = 300
+opt.timeoutlen = 400
 opt.updatetime = 300
 
 g.autopairs_enabled = true
