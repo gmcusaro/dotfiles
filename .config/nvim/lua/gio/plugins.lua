@@ -15,7 +15,6 @@ require('lazy').setup({
     { "nvim-lua/plenary.nvim" },
 
     { "catppuccin/nvim", name = "catppuccin" },
-
     { "TimUntersberger/neogit" },
     { "lewis6991/gitsigns.nvim" },
     { "sindrets/diffview.nvim" },
@@ -32,15 +31,8 @@ require('lazy').setup({
     { "nvim-telescope/telescope-file-browser.nvim" },
     { "nvim-telescope/telescope-live-grep-args.nvim" },
 
-    { "kylechui/nvim-surround",
-        version = "*",
-        event = "VeryLazy",
-        config = function()
-            require("nvim-surround").setup({})
-        end
-    },
+    { "ur4ltz/surround.nvim" },
     { "numToStr/Comment.nvim" },
-    { "Wansmer/treesj" },
     { "folke/zen-mode.nvim" },
     { "windwp/nvim-ts-autotag" },
     { "windwp/nvim-autopairs" },
