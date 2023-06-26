@@ -1,5 +1,6 @@
 require("gio.options")
 require("gio.plugins")
+require("gio.theme")
 
 local autocmd = vim.api.nvim_create_autocmd
 
