@@ -15,36 +15,35 @@ require('lazy').setup({
     { "nvim-lua/plenary.nvim" },
 
     { "catppuccin/nvim", name = "catppuccin" },
-    { "TimUntersberger/neogit" },
+    { "NeogitOrg/neogit" },
     { "lewis6991/gitsigns.nvim" },
     { "sindrets/diffview.nvim" },
     { "jiaoshijie/undotree" },
-
-    { "nvim-lualine/lualine.nvim",
-        dependencies = {
-            "meuter/lualine-so-fancy.nvim",
-        }
-    },
 
     { "nvim-treesitter/nvim-treesitter", build = { ":TSUpdate" } },
     { "nvim-telescope/telescope.nvim" },
     { "nvim-telescope/telescope-file-browser.nvim" },
     { "nvim-telescope/telescope-live-grep-args.nvim" },
 
+    { "nvim-lualine/lualine.nvim",
+        dependencies = {
+            "meuter/lualine-so-fancy.nvim",
+        }
+    },
     { "ur4ltz/surround.nvim" },
     { "numToStr/Comment.nvim" },
     { "folke/zen-mode.nvim" },
     { "windwp/nvim-ts-autotag" },
     { "windwp/nvim-autopairs" },
     { "Asheq/close-buffers.vim" },
-    -- { "ThePrimeagen/refactoring.nvim" },
+
     { "iamcco/markdown-preview.nvim",
       build = "cd app && npm install",
       init = function()
         vim.g.mkdp_filetypes = { "markdown" }
       end,
-      ft = { "markdown" }},
--- use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+      ft = { "markdown" }
+    },
 
     { "jdhao/better-escape.vim", event = { "InsertEnter" } },
 
