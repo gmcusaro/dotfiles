@@ -5,7 +5,7 @@ require('catppuccin').setup({
             green = '#A2CEB4',
             base = '#181824',
             mantle = '#11111b',
-            flamingo = '#45475A'
+            flamingo = '#77798C'
         }
     }
 })
