@@ -10,6 +10,7 @@ require("nvim-treesitter.configs").setup {
         "markdown",
         "markdown_inline",
         "json",
+        "yaml"
     },
     highlight = {
         enable = true,
