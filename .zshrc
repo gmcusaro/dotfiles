@@ -32,6 +32,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# No HomeBrew Analytics
+export HOMEBREW_NO_ANALYTICS=1
+
 # Init StarShip
 eval "$(starship init zsh)"
 
