@@ -68,7 +68,7 @@ end
 function Live_grep()
     local opts = {
         prompt_title = "~ Live grep ~",
-        search = vim.fn.input("Grep > ")
+        -- search = vim.fn.input("Grep > ")
     }
     builtin.grep_string(opts)
 end
