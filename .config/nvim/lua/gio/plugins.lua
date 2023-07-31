@@ -36,16 +36,22 @@ require('lazy').setup({
     { "windwp/nvim-ts-autotag" },
     { "windwp/nvim-autopairs" },
     { "Asheq/close-buffers.vim" },
+    { "jdhao/better-escape.vim", event = { "InsertEnter" } },
 
     { "iamcco/markdown-preview.nvim",
-      build = "cd app && npm install",
-      init = function()
-        vim.g.mkdp_filetypes = { "markdown" }
-      end,
-      ft = { "markdown" }
+        build = "cd app && npm install",
+        init = function()
+            vim.g.mkdp_filetypes = { "markdown" }
+        end,
+        ft = { "markdown" }
     },
 
-    { "jdhao/better-escape.vim", event = { "InsertEnter" } },
+    { 'echasnovski/mini.jump',
+        version = '*',
+        init = function ()
+            require('mini.jump').setup()
+        end
+    },
 
     {   "VonHeikemen/lsp-zero.nvim",
         dependencies = {
