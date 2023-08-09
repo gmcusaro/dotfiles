@@ -37,8 +37,6 @@ vim.keymap.set("n", "<leader>dc", "DiffviewClose<CR>", silent)
 
 -- ZenMode
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>", silent)
--- vim.keymap.set("v", "<leader>dd", function ()
---     require("telescope").extensions.refactoring.refactors()
--- end, silent)
 
--- vadi altri https://medium.com/linux-with-michael/must-have-neovim-keymaps-51c283394070
+-- U for redo
+vim.keymap.set("n", "U", "<C-r>", silent)
