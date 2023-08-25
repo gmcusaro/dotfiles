@@ -4,7 +4,7 @@ neogit.setup {
     integrations = {
         diffview = true
     },
-    disable_hint = true,
+    -- disable_hint = true,
     disable_commit_confirmation = true,
     kind = "split"
 }
