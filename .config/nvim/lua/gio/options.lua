@@ -11,6 +11,7 @@ g.netrw_browse_split = 0
 
 opt.mouse = 'nv'
 opt.clipboard = 'unnamedplus'
+opt.iskeyword:append("-")
 
 opt.termguicolors = true
 opt.errorbells = true
