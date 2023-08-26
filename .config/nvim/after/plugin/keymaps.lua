@@ -19,16 +19,21 @@ vim.keymap.set("n", "sl", "<C-w>l", silent)
 
 vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", silent)
 vim.keymap.set("n", "<leader>sh", ":split<CR>", silent)
+vim.keymap.set("n", "<leader>se", "<C-w>=", silent)
+vim.keymap.set("n", "<leader>sc", ":close<CR>", silent)
 
 vim.keymap.set("n", "<leader>+", ":vertical resize +4<CR>", silent)
 vim.keymap.set("n", "<leader>-", ":vertical resize -4<CR>", silent)
 
 vim.keymap.set("n", "<C-s>", ":set scrollbind! scrollbind?<CR>", silent)
 
+vim.keymap.set("n", "U", "<C-r>", silent) -- U for redo
+
 -- Buffer
 vim.keymap.set("n", "<TAB>", ":bnext<CR>", silent)
 vim.keymap.set("n", "<S-TAB>", ":bprevious<CR>", silent)
-vim.keymap.set("n", "<leader>b", ":Bdelete menu<CR>", silent)
+
+vim.keymap.set("n", "<leader>b", ":Bdelete hidden<CR>", silent)
 vim.keymap.set("n", "<leader>t", ":Bdelete this<CR>", silent)
 
 -- Diffview
@@ -37,6 +42,3 @@ vim.keymap.set("n", "<leader>dc", "DiffviewClose<CR>", silent)
 
 -- ZenMode
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>", silent)
-
--- U for redo
-vim.keymap.set("n", "U", "<C-r>", silent)
