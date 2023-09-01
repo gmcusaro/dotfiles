@@ -2,7 +2,7 @@ local silent = { silent = true, noremap = true }
 
 vim.keymap.set("n", "x", '"_x', silent) -- Do not yank with x
 vim.keymap.set("n", "<CR>", ":nohlsearch<CR>", silent) -- Clear highlight search
-vim.keymap.set("n", "<leader>a", "gg<S-v>G", silent) -- select all
+vim.keymap.set("n", "<leader>a", "ggVG", silent) -- Select all
 
 vim.keymap.set("v", "<BS>", '\"_d', silent) -- Backspace delete visual mode
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", silent)
