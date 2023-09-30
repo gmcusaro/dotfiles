@@ -9,6 +9,7 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
@@ -53,23 +54,20 @@ require('lazy').setup({
         end
     },
 
-    {   "VonHeikemen/lsp-zero.nvim",
-        dependencies = {
-            -- LSP Support
-            {"neovim/nvim-lspconfig"},
-            {"williamboman/mason.nvim"},
-            {"williamboman/mason-lspconfig.nvim"},
+    -- Autocompletion
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/cmp-buffer'},
+    {'hrsh7th/cmp-path'},
+    {'hrsh7th/cmp-cmdline'},
+    {'hrsh7th/nvim-cmp'},
+    {'hrsh7th/cmp-nvim-lua'},
 
-            -- Autocompletion
-            {"hrsh7th/nvim-cmp"},
-            {"hrsh7th/cmp-nvim-lsp"},
-            {"hrsh7th/cmp-buffer"},
-            {"hrsh7th/cmp-path"},
-            {"saadparwaiz1/cmp_luasnip"},
-            {"hrsh7th/cmp-nvim-lua"},
-
-            -- Snippets
-            {"L3MON4D3/LuaSnip"},
-        }
-    }
+    -- LSP
+    {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+    {'williamboman/mason.nvim'},
+    {'williamboman/mason-lspconfig.nvim'},
+    {'neovim/nvim-lspconfig'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/nvim-cmp'},
+    {'L3MON4D3/LuaSnip'},
 })

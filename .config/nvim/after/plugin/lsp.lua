@@ -24,6 +24,8 @@ lsp.on_attach(function(_, bufnr)
     vim.keymap.set("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
 end)
 
+
+-- local lua_opts = lsp.nvim_lua_ls()
 lsp.configure('lua_ls', {
     settings = {
         Lua = {
