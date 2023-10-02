@@ -3,7 +3,9 @@ local cmp_action = require('lsp-zero').cmp_action()
 
 cmp.setup({
     sources = {
-        { name = 'nvim_lua' }
+        { name = 'nvim_lsp' },
+        { name = 'nvim_lua' },
+        { name = 'buffer' },
     },
 
     mapping = cmp.mapping.preset.insert({

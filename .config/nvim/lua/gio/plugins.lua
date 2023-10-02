@@ -55,15 +55,16 @@ require('lazy').setup({
     },
 
     -- Autocompletion
-    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/nvim-cmp'},
     {'hrsh7th/cmp-buffer'},
     {'hrsh7th/cmp-path'},
     {'hrsh7th/cmp-cmdline'},
-    {'hrsh7th/nvim-cmp'},
-    {'hrsh7th/cmp-nvim-lua'},
 
     -- LSP
-    {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+    {'VonHeikemen/lsp-zero.nvim',
+        branch = 'v3.x',
+        lazy = true
+    },
     {'williamboman/mason.nvim'},
     {'williamboman/mason-lspconfig.nvim'},
     {'neovim/nvim-lspconfig'},

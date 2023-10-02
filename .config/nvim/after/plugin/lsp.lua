@@ -26,22 +26,35 @@ end)
 
 
 -- local lua_opts = lsp.nvim_lua_ls()
-lsp.configure('lua_ls', {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
-})
+-- lsp.configure('lua_ls', {
+--     settings = {
+--         Lua = {
+--             diagnostics = {
+--                 globals = { 'vim' }
+--             }
+--         }
+--     }
+-- })
 
-lsp.configure('tsserver', {
-    settings = {
-        completions = {
-            completeFunctionCalls = true
-        }
-    }
+local lua_opts = lsp.nvim_lua_ls()
+require('lspconfig').lua_ls.setup(lua_opts)
+
+-- lsp.configure('tsserver', {
+--     -- single_file_support = false,
+--     settings = {
+--         completions = {
+--             completeFunctionCalls = true
+--         }
+--     }
+-- })
+
+require('lspconfig').tsserver.setup({
+  single_file_support = false,
+  on_init = function(client)
+    -- disable formatting capabilities
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentFormattingRangeProvider = false
+  end,
 })
 
 lsp.setup()

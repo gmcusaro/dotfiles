@@ -1,4 +1,3 @@
-local lsp = require('lsp-zero')
 require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = {
@@ -10,6 +9,6 @@ require('mason-lspconfig').setup({
         'jsonls'
     },
     handlers = {
-        lsp.default_setup,
+        require('lsp-zero').default_setup,
     },
 })
