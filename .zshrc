@@ -27,6 +27,8 @@ plugins=(
     macos
     zsh-autosuggestions
     zsh-syntax-highlighting
+    fast-syntax-highlighting
+    # zsh-autocomplete
     brew
 )
 
@@ -53,3 +55,5 @@ alias vim="nvim"
 
 # Dotfiles bare repo
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+clear
