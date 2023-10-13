@@ -9,6 +9,7 @@ My dotfile configuration.
 - ZSH config (with [Oh My ZSH!](https://github.com/ohmyzsh/ohmyzsh))
 - Git utilities to make my life easier
 - [NeoVim](https://github.com/neovim/neovim) (lua) config
+- [Alacritty](https://github.com/alacritty/alacritty) config
 - Miscellaneous setup
 
 ## 🚀  Setup environment on your machine
