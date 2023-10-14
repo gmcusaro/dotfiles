@@ -28,7 +28,6 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     fast-syntax-highlighting
-    # zsh-autocomplete
     brew
 )
 
@@ -36,6 +35,8 @@ source $ZSH/oh-my-zsh.sh
 
 # No HomeBrew Analytics
 export HOMEBREW_NO_ANALYTICS=1
+
+bindkey '\t' autosuggest-accept
 
 # Init StarShip
 eval "$(starship init zsh)"
@@ -55,5 +56,3 @@ alias vim="nvim"
 
 # Dotfiles bare repo
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-clear
