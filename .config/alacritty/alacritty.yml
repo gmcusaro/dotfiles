@@ -28,7 +28,7 @@ scrolling:
 
 font:
   normal:
-    family: Hack Nerd Font Mono
+    family: Fira Code
     style: Regular
   bold:
     family: Hack Nerd Font Mono
@@ -36,13 +36,13 @@ font:
   italic:
     family: Hack Nerd Font Mono
     style: Italic
-  size: 16.0
+  size: 14.0
   offset:
     x: 0
     y: 1
   glyph_offset:
    x: 0
-   y: 2
+   y: 0
   builtin_box_drawing: true
 
 draw_bold_text_with_bright_colors: true
