@@ -8,18 +8,8 @@ export TERM=xterm-256color
 export EDITOR=nvim
 export VISUAL="$EDITOR"
 export SSH_KEY_PATH="~/.ssh/giohub"
-
-if type brew &>/dev/null; then
-    FPATH=$(brew --prefix)/share/zsh-completions:$(brew --prefix)/share/zsh/site-functions:$FPATH
-fi
-
 export UPDATE_ZSH_DAYS=7
-ZSH_THEME="amuse"
-ZSH_DISABLE_COMPFIX="true"
-KEYTIMEOUT=0
-
-# Custom highlighting
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+export HOMEBREW_NO_ANALYTICS=1 # No HomeBrew Analytics
 
 # my personal list
 plugins=(
@@ -33,10 +23,22 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# No HomeBrew Analytics
-export HOMEBREW_NO_ANALYTICS=1
+if type brew &>/dev/null
+then
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+    autoload -Uz compinit
+    compinit
+fi
 
-bindkey '\t' autosuggest-accept
+ZSH_THEME="amuse"
+ZSH_DISABLE_COMPFIX="true"
+KEYTIMEOUT=0
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+
+# ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(buffer-empty bracketed-paste accept-line push-line-or-edit)
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_USE_ASYNC=true
+bindkey '^I' autosuggest-accept
 
 # Init StarShip
 eval "$(starship init zsh)"
@@ -45,14 +47,12 @@ eval "$(starship init zsh)"
 alias t="touch"
 alias m="mkdir"
 alias c="clear"
-alias ls="exa -a --icons"
-alias lsl="exa -a -T --git-ignore --icons"
+alias ls="eza -a --icons"
+alias lsl="eza -l -T --git-ignore"
 alias app="brew cu -a"
 alias ..="cd .."
 alias ...="cd ../.."
-alias ....="cd ../../.."
 alias v="nvim"
-alias vim="nvim"
 
 # Dotfiles bare repo
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
