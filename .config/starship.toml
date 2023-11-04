@@ -1,7 +1,7 @@
 add_newline = true
 
 [character]
-success_symbol = "[](bold)"
+success_symbol = "[>](bold)"
 error_symbol = "[](red)"
 
 [directory]
