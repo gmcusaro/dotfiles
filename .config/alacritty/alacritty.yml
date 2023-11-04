@@ -4,19 +4,17 @@ env:
 shell:
   program: /bin/zsh
 
-
 window:
   opacity: 1.0
   title: Alacritty
   dynamic_title: true
   decorations: full
-  startup_mode: Windowed # On Mac
   dimensions:
     columns: 140
     lines: 38
   padding:
     x: 15
-    y: 15
+    y: 10
   dynamic_padding: false
   class:
     instance: Alacritty
@@ -28,13 +26,13 @@ scrolling:
 
 font:
   normal:
-    family: Hack Nerd Font Mono
+    family: Hack Nerd Font
     style: Regular
   bold:
-    family: Hack Nerd Font Mono
+    family: Hack Nerd Font
     style: Bold
   italic:
-    family: Hack Nerd Font Mono
+    family: Hack Nerd Font
     style: Italic
   size: 14.0
   offset:
@@ -43,7 +41,7 @@ font:
   glyph_offset:
    x: 0
    y: 0
-  builtin_box_drawing: true
+  builtin_box_drawing: false
 
 draw_bold_text_with_bright_colors: true
 
