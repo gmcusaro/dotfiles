@@ -50,9 +50,6 @@ require('lazy').setup({
 
     { 'echasnovski/mini.jump',
         version = '*',
-        init = function ()
-            require('mini.jump').setup()
-        end
     },
 
     -- Autocompletion
