@@ -115,7 +115,7 @@ ins_right {
 ins_right {
     "diagnostics",
     sources = { "nvim_diagnostic" },
-    symbols = { error = " ", warn = " ", info = " " },
+    symbols = { error = "󰅚 ", warn = " ", hint = "󰌶 ", info = " "  },
     diagnostics_color = {
         color_error = { fg = mocha.red },
         color_warn = { fg = mocha.yellow },
