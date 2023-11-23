@@ -1,17 +1,13 @@
-local lsp_zero = require('lsp-zero')
-local lsp_config = require('lspconfig')
+local lspzero = require('lsp-zero')
+local lspconfig = require('lspconfig')
 
-lsp_zero.set_preferences({
-    suggest_lsp_servers = false,
-    sign_icons = {
-        error = 'E',
-        warn = 'W',
-        hint = 'H',
-        info = 'I'
-    }
-})
+local signs = { Error = "󰅚 ", Warn = " ", Hint = "󰌶 ", Info = " " }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
 
-lsp_zero.on_attach(function(_, bufnr)
+lspzero.on_attach(function(_, bufnr)
     local opts = {buffer = bufnr, remap = false}
 
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
@@ -24,26 +20,15 @@ lsp_zero.on_attach(function(_, bufnr)
     vim.keymap.set("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
 end)
 
-lsp_zero.setup()
+lspzero.setup()
 
--- local lua_opts = lsp.nvim_lua_ls()
--- lsp.configure('lua_ls', {
---     settings = {
---         Lua = {
---             diagnostics = {
---                 globals = { 'vim' }
---             }
---         }
---     }
--- })
-
-local lua_opts = lsp_zero.nvim_lua_ls({
+local lua_opts = lspzero.nvim_lua_ls({
     single_file_support = false
 })
 
-lsp_config.lua_ls.setup(lua_opts)
+lspconfig.lua_ls.setup(lua_opts)
 
-lsp_config.tsserver.setup({
+lspconfig.tsserver.setup({
     single_file_support = false,
     settings = {
         completions = {
