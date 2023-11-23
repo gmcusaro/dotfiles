@@ -10,7 +10,9 @@ require("nvim-treesitter.configs").setup {
         "markdown",
         "markdown_inline",
         "json",
-        "yaml"
+        "yaml",
+        "gitignore",
+        "toml"
     },
     highlight = {
         enable = true,
@@ -26,3 +28,11 @@ require("nvim-treesitter.configs").setup {
         enable = true
     }
 }
+
+-- Set .mdx for markdown
+vim.filetype.add({
+  extension = {
+    mdx = "mdx"
+  }
+})
+vim.treesitter.language.register('markdown', 'mdx')
