@@ -99,6 +99,8 @@ ins_right {
             local filetypes = client.config.filetypes
             if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
                 return client.name
+            else
+                return "unkown"
             end
         end
     end,
