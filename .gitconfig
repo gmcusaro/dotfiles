@@ -1,0 +1,13 @@
+[user]
+	email = gcusaro@me.com
+	name = Giovanni Maria Cusaro
+[alias]
+    cm  = commit -m
+[core]
+    editor = neovim
+[init]
+    defaultBranch = main
+[github]
+    user = gmcusaro
+[diff]
+    tool = nvimdiff
