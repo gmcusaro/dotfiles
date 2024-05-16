@@ -90,8 +90,8 @@ program = "/bin/zsh"
 decorations = "buttonless" # "full"
 dynamic_padding = false
 dynamic_title = false
-opacity = 1.0
-title = "Alacritty"
+opacity = 0.95
+blur = true
 
 [window.class]
 general = "Alacritty"
@@ -102,5 +102,5 @@ columns = 140
 lines = 38
 
 [window.padding]
-x = 15
+x = 10
 y = 10
