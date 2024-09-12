@@ -4,13 +4,14 @@ return {
         "nvim-lua/plenary.nvim",
         "nvim-telescope/telescope-file-browser.nvim",
         "nvim-telescope/telescope-live-grep-args.nvim",
-        "nvim-tree/nvim-web-devicons"
+        "nvim-tree/nvim-web-devicons",
     },
     config = function()
         local telescope = require("telescope")
         local file_browser = require("telescope").extensions.file_browser
         local actions = require("telescope.actions")
         local builtin = require("telescope.builtin")
+        local opts = { silent = true, noremap = true }
 
         telescope.setup({
             defaults = {
@@ -18,13 +19,13 @@ return {
                 selection_caret = "| ",
                 mappings = {
                     n = {
+                        ["-"] = file_browser.actions.goto_parent_dir,
                         ["q"] = actions.close,
                         ["N"] = file_browser.actions.create,
                         ["M"] = file_browser.actions.move,
                         ["D"] = file_browser.actions.remove,
-                        ["R"] = file_browser.actions.rename,
-                        ["-"] = file_browser.actions.goto_parent_dir,
-                    },
+                        ["R"] = file_browser.actions.rename
+                    }
                 },
                 layout_config = {
                     prompt_position = "top",
@@ -42,7 +43,6 @@ return {
             }
         })
 
-        local opts = { silent = true, noremap = true }
         vim.keymap.set("n", "<leader>ff", function()
             builtin.find_files({
                 prompt_title = "Find files",
@@ -50,6 +50,7 @@ return {
                 hidden = true
             })
         end, opts)
+
 
         vim.keymap.set("n", "<leader>fb", function()
             file_browser.file_browser({
@@ -87,6 +88,14 @@ return {
                 prompt_title = "Git",
                 hidden = true,
                 previewr = false
+            })
+        end, opts)
+
+        vim.keymap.set("n", "<leader>d", function()
+            builtin.diagnostics({
+                prompt_title = "Diagnostics",
+                previewer = true,
+                initial_mode = "normal"
             })
         end, opts)
     end,
