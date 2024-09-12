@@ -26,6 +26,18 @@ autocmd('TextYankPost', {
     end
 })
 
+-- Autoformat when save
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*",
+    callback = function(args)
+        require("conform").format({
+            bufnr = args.buf,
+            -- lsp_fallback = true,
+            quiet = true,
+        })
+    end
+})
+
 -- Create dir when saving file, in case intermediate directory doesn't exist
 autocmd({ "BufWritePre" }, {
     pattern = "*",
