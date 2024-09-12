@@ -1,46 +1,51 @@
-local o = vim.opt
-local g = vim.g
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-g.mapleader = " "
-g.maplocalleader = " "
-g.backup = false
-g.writebackup = false
-g.swapfile = false
-o.confirm = true
-o.updatetime = 250
-o.timeoutlen = 300
+vim.g.backup = false
+vim.g.writebackup = false
+vim.g.swapfile = false
+vim.opt.confirm = true
 
-o.mouse = "nv"
-o.clipboard = "unnamed,unnamedplus"
-o.termguicolors = true
-o.pumblend = 20
-o.wildmode = "lastused,list:full"
-o.wildoptions = "pum"
-o.showmode = false
-o.cmdheight = 2
-o.laststatus = 3
+vim.opt.termguicolors = true
+vim.opt.clipboard = "unnamed,unnamedplus"
+vim.opt.shortmess = "IaOAWo"
+vim.opt.wildmode = "lastused,list:full"
+vim.opt.wildoptions = "pum"
+vim.opt.pumblend = 20
+-- vim.opt.completeopt = { "menuone", "noinsert", "preview" }
 
-o.cursorline = true
-o.scrolloff = 8
-o.sidescrolloff = 8
-o.number = true
-o.relativenumber = true
+vim.opt.updatetime = 250
+vim.opt.timeoutlen = 300
 
-o.signcolumn = "yes"
-o.linebreak = true
-o.breakindent = true
-o.expandtab = true
-o.smartcase = true
-o.ignorecase = true
-o.tabstop = 4
-o.softtabstop = 4
-o.shiftwidth = 4
-g.showmatch = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.cursorline = true
+vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
+vim.opt.mouse = "nv"
+vim.optshowmode = false
+vim.opt.cmdheight = 2
+vim.opt.laststatus = 3
+vim.opt.signcolumn = "yes"
+vim.opt.updatetime = 250
+vim.opt.timeoutlen = 300
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+vim.opt.scrolloff = 10
 
-o.splitbelow = true
-o.splitright = true
-o.equalalways = false
+vim.opt.hlsearch = false
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.g.showmatch = true
 
-o.timeoutlen = 500
-o.updatetime = 400
-o.shortmess = "IaOAWo"
+vim.opt.breakindent = true
+vim.opt.linebreak = true
+
+vim.opt.expandtab = true
+vim.opt.expandtab = true
+
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+
+vim.g.have_nerd_font = false
