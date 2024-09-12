@@ -85,10 +85,6 @@ _fzf_comprun() {
   esac
 }
 
-# Eza
-alias ls="eza -a --icons=always --no-time --no-user --no-permissions"
-alias lsl="eza --tree --icons"
-
 # Aliases
 alias t="touch"
 alias m="mkdir"
@@ -96,6 +92,10 @@ alias c="clear"
 alias app="brew cu -a"
 alias ..="cd .."
 alias v="nvim"
+
+# Eza
+alias ls="eza -a --icons=always --no-time --no-user --no-permissions"
+alias lsl="eza --tree --icons"
 
 # dot bare repo
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
