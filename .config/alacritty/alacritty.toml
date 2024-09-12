@@ -42,7 +42,7 @@ builtin_box_drawing = false
 size = 14.3
 
 [font.normal]
-family = "FiraCode Nerd Font"
+family = "FiraMono Nerd Font"
 style = "Regular"
 
 [font.offset]
@@ -87,11 +87,11 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 program = "/bin/zsh"
 
 [window]
-decorations = "buttonless" # "full"
+# decorations = "buttonless" # "full"
 dynamic_padding = false
 dynamic_title = false
-opacity = 0.95
-blur = true
+opacity = 1.0
+# blur = true
 
 [window.class]
 general = "Alacritty"
