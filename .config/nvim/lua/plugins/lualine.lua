@@ -1,145 +1,114 @@
--- sample for ministatus line: https://github.com/alpha2phi/neovim-for-minimalist/blob/e4846b9bbf570516671b59bde2c11f2ea001d3a0/lua/config/mini/statusline.lua
-local config = function()
-    local lualine = require('lualine')
-
-    local mocha = require("catppuccin.palettes").get_palette "mocha"
-
-    local conditions = {
-        buffer_not_empty = function()
-            return vim.fn.empty(vim.fn.expand('%:t')) ~= 1
-        end,
-
-        hide_in_width = function()
-            return vim.fn.winwidth(0) > 80
-        end,
-    }
-
-    -- Config
-    local config = {
-        options = {
-            component_separators = '',
-            section_separators = '',
-            theme = 'catppuccin',
-            disabled_filetypes = { 'NeogitStatus' }
-        },
-        sections = {
-            lualine_a = { 'fancy_mode' },
-            lualine_b = {},
-            lualine_c = {},
-            lualine_x = {},
-            lualine_y = {},
-            lualine_z = {},
-        },
-    }
-
-    local function ins_left(component)
-        table.insert(config.sections.lualine_c, component)
-    end
-
-    local function ins_right(component)
-        table.insert(config.sections.lualine_x, component)
-    end
-
-    ins_left {
-        "branch",
-        color = { fg = mocha.mauve, gui = 'bold' },
-    }
-
-    ins_left {
-        "diff",
-        symbols = { added = ' ', modified = '󱓼 ', removed = ' ' },
-        diff_color = {
-            added = { fg = mocha.green },
-            modified = { fg = mocha.yellow },
-            removed = { fg = mocha.red },
-        },
-    }
-
-    ins_left {
-        function()
-            return '%='
-        end,
-    }
-
-    ins_left {
-        'filename', file_status = true, path = 1,
-        icons_enabled = true,
-        color = { fg = '#ffffff', gui = 'bold' },
-        cond = conditions.buffer_not_empty,
-    }
-
-    ins_left {
-        'filesize',
-        cond = conditions.buffer_not_empty,
-    }
-
-    -- ins_right {
-    --     "fileformat", icons_enabled = true,
-    -- }
-
-    -- ins_left {
-    --     "filetype", icons_enabled = true
-    -- }
-
-    ins_right {
-        function()
-            local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
-            local clients = vim.lsp.get_active_clients()
-            if next(clients) == nil then
-                return 'NO LSP'
-            end
-            for _, client in ipairs(clients) do
-                local filetypes = client.config.filetypes
-                if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-                    return client.name
-                else
-                    return "unkown"
-                end
-            end
-        end,
-        color = { fg = '#ffffff' },
-    }
-
-    ins_right {
-        function()
-            return ' | '
-        end,
-        color = { fg = '#ffffff' }
-    }
-
-    ins_right {
-        "diagnostics",
-        sources = { "nvim_diagnostic" },
-        symbols = { error = "󰅚 ", warn = " ", hint = "󰌶 ", info = " " },
-        diagnostics_color = {
-            color_error = { fg = mocha.red },
-            color_warn = { fg = mocha.yellow },
-            color_info = { fg = mocha.sky },
-            color_hint = { fg = mocha.sky }
-        },
-    }
-
-    ins_right {
-        'o:encoding',
-        fmt = string.upper,
-        cond = conditions.hide_in_width,
-    }
-
-    -- ins_right {
-    --     '%l:%c', '%p%%/%L'     -- 'fancy_location'
-    -- }
-
-    ins_right {
-        'progress'
-    }
-
-    lualine.setup(config)
-end
-
 return {
     "nvim-lualine/lualine.nvim",
-    dependencies = {
-        "meuter/lualine-so-fancy.nvim"
-    },
-    config = config
+    config = function()
+        local mocha = require("catppuccin.palettes").get_palette "mocha"
+
+        local modes = {
+            ["n"] = "NOR",
+            ["no"] = "NOR",
+            ["v"] = "VIS",
+            ["V"] = "VIS-L",
+            [""] = "VIS-B",
+            ["s"] = "SEL",
+            ["S"] = "SEL-L",
+            [""] = "SEL-B",
+            ["i"] = "INS",
+            ["ic"] = "INS",
+            ["R"] = "REPL",
+            ["Rv"] = "VIS-R",
+            ["c"] = "CMD",
+            ["cv"] = "VIM EX",
+            ["ce"] = "EX",
+            ["r"] = "PROMPT",
+            ["rm"] = "MOAR",
+            ["r?"] = "CONFIRM",
+            ["!"] = "SHELL",
+            ["t"] = "TERM",
+        }
+
+        local function mode()
+            local current_mode = vim.api.nvim_get_mode().mode
+            return string.format("%s", modes[current_mode]):upper()
+        end
+
+        require("lualine").setup {
+            options = {
+                component_separators = "",
+                section_separators = "",
+                theme = "catppuccin",
+                disabled_filetypes = {
+                    "TelescopePrompt",
+                    "qf",
+                    "fugitive",
+                    "lazy",
+                    "mason",
+                    "undotree"
+                },
+            },
+            sections = {
+                lualine_a = { mode },
+                lualine_b = {},
+                lualine_c = {
+                    {
+                        "diff",
+                        symbols = { added = ' ', modified = '󱓻 ', removed = ' ' },
+                        diff_color = {
+                            added = { fg = mocha.green },
+                            modified = { fg = mocha.subtext0 },
+                            removed = { fg = mocha.red },
+                        }
+                    },
+                    {
+                        "%="
+                    },
+                    {
+                        "buffers",
+                        show_filename_only = true,
+                        hide_filename_extension = false,
+                        show_modified_status = true,
+                        icons_enabled = false,
+                        mode = 0,
+                        max_length = vim.o.columns * 2 / 3,
+                        symbols = {
+                            modified = " [+]",
+                            alternate_file = ""
+                        },
+                        buffers_color = {
+                            inactive = { fg = mocha.flamingo },
+                            active = { fg = mocha.subtext1, gui = "bold" }
+                        }
+                    }
+                },
+                lualine_x = {
+                    {
+                        "diagnostics",
+                        sources = { "nvim_lsp", "nvim_diagnostic", "nvim_workspace_diagnostic" },
+                        symbols = {
+                            error = " ",
+                            warn = "󱇎 ",
+                            hint = "󰌶 ",
+                            info = "󰰄 "
+                        },
+                        diagnostics_color = {
+                            error = { fg = mocha.red },
+                            warn  = { fg = mocha.subtext1 },
+                            info  = { fg = mocha.subtext1 },
+                            hint  = { fg = mocha.subtext1 }
+                        }
+                    },
+                    {
+                        "branch",
+                        icon = "",
+                        color = { fg = mocha.maroon, gui = "bold" }
+                    }
+                },
+                lualine_y = {
+                    {
+                        "%l:%c", "%p%%/%L"
+                    }
+                },
+                lualine_z = {},
+            }
+        }
+    end
 }
