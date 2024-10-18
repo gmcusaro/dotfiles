@@ -1,5 +1,35 @@
 return {
     {
+        'MeanderingProgrammer/render-markdown.nvim',
+        config = function ()
+            require("render-markdown").setup({
+                heading = {
+                    sign = false,
+                    icons = {},
+                },
+                link = {
+                    image = "",
+                    email = "",
+                    hyperlink = "",
+                    custom = {
+                        web = { pattern = '^http[s]?://', icon = '', highlight = 'RenderMarkdownLink' },
+                    }
+                },
+                bullet = {
+                    enabled = false
+                },
+                checkbox = {
+                    enabled = false,
+                },
+                code = {
+                    sign = false,
+                    above = '',
+                    below = '▀'
+                },
+            })
+        end
+    },
+    {
         "tadmccorkle/markdown.nvim",
         ft = "markdown",
         opts = {
@@ -10,19 +40,19 @@ return {
             inline_surround = {
                 emphasis = {
                     key = "i",
-                    txt = "*",
+                    txt = "*"
                 },
                 strong = {
                     key = "g",
-                    txt = "**",
+                    txt = "**"
                 },
                 strikethrough = {
                     key = "s",
-                    txt = "~~",
+                    txt = "~~"
                 },
                 code = {
                     key = "c",
-                    txt = "`",
+                    txt = "`"
                 }
             }
         }
@@ -31,6 +61,6 @@ return {
         "iamcco/markdown-preview.nvim",
         cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
         ft = { "markdown" },
-        build = function() vim.fn["mkdp#util#install"]() end,
+        build = function() vim.fn["mkdp#util#install"]() end
     }
 }

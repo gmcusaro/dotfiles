@@ -11,7 +11,6 @@ end, opts)
 -- map.set("n", "<C-s>", "<cmd>scrollbind! scrvllbind?<CR>", opts)
 map.set("n", "<leader>a", "ggVG", opts)     -- Select all
 map.set("n", "F", "^", { noremap = false }) -- First word
-map.set("n", "E", "$", { noremap = false }) -- End line
 map.set("v", "K", ":m '<-2<CR>gv=gv", opts) -- Move line up
 map.set("v", "J", ":m '>+1<CR>gv=gv", opts) -- Move line down
 map.set("n", "U", "<C-r>", opts)            -- U for redo
